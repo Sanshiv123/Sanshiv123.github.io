@@ -13,92 +13,264 @@
       color: #222;
       line-height: 1.6;
     }
-
+  
     header {
       background: #0f172a;
       color: white;
-      padding: 60px 20px;
-      text-align: center;
+      padding: 50px;
+      position: relative;
+      text-align: left;
+    }
+  
+    .header-links {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 0.9rem;
+    }
+  
+    .header-links a {
+      color: #e5e7eb;
+      margin-left: 15px;
+      text-decoration: none;
+    }
+  
+    .header-links a:hover {
+      text-decoration: underline;
     }
 
-    header h1 {
-      margin-bottom: 10px;
+    .profile-pic {
+      position: absolute;
+      top: 60px;
+      right: 50px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #e5e7eb;
     }
-
-    header p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-    }
-
+  
     section {
       max-width: 900px;
-      margin: 40px auto;
+      margin: 30px auto;
       background: white;
-      padding: 35px;
+      padding: 10px 28px 24px;
       border-radius: 10px;
     }
-
+  
     h2 {
       border-bottom: 2px solid #eee;
       padding-bottom: 8px;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
-    h3 {
-      margin-bottom: 5px;
+    header h1 {
+      margin-bottom: 2px;
     }
 
-    ul {
-      padding-left: 20px;
+    header p {
+      margin-top: 0;
+    }
+
+    .skills {
+      margin-top: 10px;
     }
 
     .skills span {
       display: inline-block;
       background: #e5e7eb;
+      color: #111827;
       margin: 6px 6px 0 0;
       padding: 6px 12px;
       border-radius: 20px;
       font-size: 0.9rem;
     }
-
-    a {
-      color: #2563eb;
-      text-decoration: none;
+    
+    .experience-item {
+      padding-bottom: 12px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid #e5e7eb;
     }
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #555;
+    .experience-item:last-child {
+      border-bottom: none;
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+    }
+
+    .experience-header h3 {
+      margin: 0;
+    }
+
+    .experience-meta {
+      font-size: 0.85rem;
+      color: #6b7280;
+      white-space: nowrap;
+    }
+
+    .project {
+      padding: 12px 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .project:last-child {
+      border-bottom: none;
+    }
+
+    .project h3 {
+      margin-bottom: 6px;
+    }
+
+    .project-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       font-size: 0.9rem;
+      margin-bottom: 8px;
     }
+
+    .project-meta a {
+      text-decoration: none;
+      color: #2563eb;
+      font-weight: 500;
+    }
+
+    .project-meta a:hover {
+      text-decoration: underline;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+    }
+
+    .project-link {
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: #2563eb;
+      white-space: nowrap;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+    .tags {
+      margin-top: 8px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #f1f5f9;
+      color: #0f172a;
+      font-size: 0.75rem;
+      padding: 4px 8px;
+      border-radius: 6px;
+      margin-right: 6px;
+      margin-top: 6px;
+    }
+
+    .hackathon-item {
+      padding: 16px 20px;
+      margin-bottom: 18px;
+      border-left: 4px solid #2563eb; /* blue accent */
+      background: #f8fafc;
+      border-radius: 6px;
+    }
+
+    .hackathon-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+    }
+
+    .hackathon-header h3 {
+      margin: 0;
+      font-size: 1.05rem;
+    }
+
+    .hackathon-meta {
+      font-size: 0.85rem;
+      color: #6b7280;
+      white-space: nowrap;
+    }
+
+    .leadership-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .leadership-item {
+      display: flex;
+      gap: 14px;
+      padding: 16px 18px;
+      background: #f8fafc;
+      border-left: 4px solid #16a34a; /* green accent for leadership */
+      border-radius: 6px;
+    }
+
+    .leadership-icon {
+      font-size: 1.4rem;
+      line-height: 1.4;
+    }
+
+    .leadership-title {
+      display: block;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .leadership-content span {
+      display: block;
+      font-size: 0.9rem;
+      color: #374151;
+    }
+
   </style>
 </head>
 
 <body>
 
 <header>
+  <img src="resources/photo.jpeg" alt="Sanchusri Kavitha Babu" class="profile-pic">
+
+  <div class="header-links">
+    <a href="mailto:sanchu2804kb@gmail.com">Email</a>
+    <a href="https://github.com/Sanshiv123" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/sanchusri-kavitha-babu-058231255/" target="_blank">LinkedIn</a>
+  </div>
+
   <h1>Sanchusri Kavitha Babu</h1>
   <p>Backend Software Engineer | Distributed Systems & Cloud</p>
 </header>
 
 <section>
-  <h2>About Me</h2>
+  <h2>ABOUT ME</h2>
   <p>
     I am a backend-focused software engineer currently pursuing an
     <strong>MSc in Computer Science at New York University</strong>,
-    with a <strong>First-Class BSc in Computer Science (AI)</strong> from
+    with a <strong>First-Class BSc in Computer Science (Artificial Intelligence)</strong> from
     <strong>King’s College London</strong>.
   </p>
   <p>
-    I have hands-on experience building scalable backend systems, distributed REST APIs,
-    and cloud-native applications. I enjoy working on system design, performance,
-    and reliability problems.
+    I design and build scalable backend systems, distributed REST APIs,
+    and cloud-native applications. I am particularly interested in system design,
+    performance, and reliability, and in building production-ready software.
   </p>
 </section>
 
 <section>
-  <h2>Technical Skills</h2>
+  <h2>TECHNICAL SKILLS</h2>
   <div class="skills">
     <span>Python</span>
     <span>Java</span>
@@ -110,7 +282,6 @@
     <span>Flask</span>
     <span>React</span>
     <span>Vue.js</span>
-    <span>AWS</span>
     <span>Azure</span>
     <span>Docker</span>
     <span>Git</span>
@@ -120,54 +291,313 @@
 </section>
 
 <section>
-  <h2>Experience</h2>
+  <h2>EXPERIENCE</h2>
 
-  <h3>King’s Labs — Software Engineer</h3>
-  <p><em>London, UK | Nov 2024 – May 2025</em></p>
-  <ul>
-    <li>Built distributed REST APIs for a dental imaging SaaS platform, reducing upload latency by 30%.</li>
-    <li>Implemented JWT-based role-based access control across 15+ endpoints.</li>
-    <li>Migrated backend services from PostgreSQL to Azure Cosmos DB to improve scalability and fault tolerance.</li>
-    <li>Automated CI/CD pipelines on Azure, significantly reducing deployment time.</li>
-  </ul>
+  <div class="experience-item">
+    <div class="experience-header">
+      <h3>King’s Labs — Software Engineer</h3>
+      <span class="experience-meta">London, UK · Nov 2024 – May 2025</span>
+    </div>
+    <p>
+      Worked on backend systems for <strong>Smile-Shot</strong>, a cloud-based dental imaging
+      SaaS platform used in real clinical workflows.
+    </p>
+    <ul>
+      <li>Designed and built distributed REST APIs supporting large medical image uploads, reducing latency by 30%.</li>
+      <li>Implemented JWT-based role-based access control across 15+ endpoints.</li>
+      <li>Migrated backend services from PostgreSQL to Azure Cosmos DB to improve scalability and fault tolerance.</li>
+      <li>Automated CI/CD pipelines on Azure to improve deployment speed and reliability.</li>
+    </ul>
+  </div>
 
-  <h3>Smallcap.ai — Software Engineering Intern</h3>
-  <p><em>London, UK | Jun 2024 – Aug 2024</em></p>
-  <ul>
-    <li>Developed 20+ scalable backend APIs using Node.js and MongoDB.</li>
-    <li>Designed Flask APIs and MySQL schemas to improve query performance.</li>
-    <li>Contributed to ML pipelines for resume analysis, improving classification accuracy by 15%.</li>
-  </ul>
+  <div class="experience-item">
+    <div class="experience-header">
+      <h3>Smallcap.ai — Software Engineering Intern</h3>
+      <span class="experience-meta">London, UK · Jun 2024 – Aug 2024</span>
+    </div>
+    <p>
+      Backend engineer for <strong>Play2Earn.ai</strong>, a crypto-reward gaming platform with
+      100+ active test users.
+    </p>
+    <ul>
+      <li>Built 20+ scalable backend APIs using Node.js and MongoDB.</li>
+      <li>Designed Flask APIs and MySQL schemas to improve backend performance.</li>
+      <li>Contributed to an ML resume-analysis pipeline, improving classification accuracy by 15%.</li>
+    </ul>
+  </div>
 
-  <h3>Headstart Global — Team Lead (Micro-Internship)</h3>
-  <p><em>May 2025 – Jul 2025</em></p>
-  <ul>
-    <li>Led analysis of 10+ early-career recruitment platforms focusing on personalization and notifications.</li>
-    <li>Designed and presented 12 UI mockups and prototypes that informed implementation of 3 product features.</li>
-  </ul>
+  <div class="experience-item">
+    <div class="experience-header">
+      <h3>Skolar Edu Tech — AI Intern</h3>
+      <span class="experience-meta">Remote · Jul 2023 – Sep 2023</span>
+    </div>
+    <p>
+      AI internship focused on applied machine learning and data preprocessing.
+    </p>
+    <ul>
+      <li>Applied NLP techniques and neural networks using TensorFlow and Keras on 5K+ education records.</li>
+      <li>Built preprocessing pipelines to improve feature extraction and model training efficiency.</li>
+    </ul>
+  </div>
+
+  <div class="experience-item">
+    <div class="experience-header">
+      <h3>Headstart Global — Team Lead (Micro-Internship)</h3>
+      <span class="experience-meta">May 2025 – Jul 2025</span>
+    </div>
+    <p>
+      Led a small team on a product research engagement in the early-career recruitment space.
+    </p>
+    <ul>
+      <li>Analyzed 10+ competitor platforms focusing on personalization and notification systems.</li>
+      <li>Designed 12 UI mockups and prototypes that influenced implementation of 3 product features.</li>
+    </ul>
+  </div>
+
 </section>
 
 <section>
-  <h2>Projects</h2>
+  <h2>PROJECTS</h2>
 
-  <h3>Strype — Gamification Feature Extension</h3>
-  <ul>
-    <li>Designed badge and points progression logic for a Python learning platform.</li>
-    <li>Built a progress-tracking dashboard using Vue.js and TypeScript for 100+ users.</li>
-    <li>Conducted usability testing and authored a 25,000-word dissertation.</li>
-  </ul>
+  <!-- 1️⃣ Chess Pipeline -->
+  <div class="project">
+    <div class="project-header">
+      <h3>♟️ Chess Opening–to–Endgame Analytics Pipeline</h3>
+      <a href="https://github.com/Sanshiv123/chess-opening-endgame-pipeline"
+         target="_blank"
+         class="project-link">🐙 GitHub</a>
+    </div>
 
-  <h3>Digital Journaling Platform</h3>
-  <ul>
-    <li>Led a 5-member Agile team to deliver a secure journaling web app ahead of schedule.</li>
-    <li>Built authentication and data persistence APIs using Django and React.</li>
-  </ul>
+    <div class="project-meta">
+      <span>Distributed Big Data System</span>
+    </div>
+
+    <p>
+      A distributed batch–streaming analytics pipeline that studies how chess
+      openings statistically transition into endgame structures at scale.
+    </p>
+    <ul>
+      <li>Processed 500K+ PGN games using Hadoop MapReduce and Apache Spark.</li>
+      <li>Designed a Lambda architecture combining batch analytics with real-time inference.</li>
+      <li>Trained a CNN on FEN-encoded board states for endgame prediction.</li>
+      <li>Integrated Kafka + Spark Structured Streaming with sub–2s latency.</li>
+    </ul>
+    <div class="tags">
+      <span class="tag">Hadoop</span>
+      <span class="tag">Spark</span>
+      <span class="tag">Kafka</span>
+      <span class="tag">MongoDB</span>
+      <span class="tag">TensorFlow</span>
+      <span class="tag">Distributed Systems</span>
+    </div>
+  </div>
+
+  <!-- 2️⃣ MindSafe -->
+  <div class="project">
+    <div class="project-header">
+      <h3>🧠 MindSafe — AI Media Safety Platform</h3>
+      <a href="https://github.com/TylersHub/MindSafe"
+         target="_blank"
+         class="project-link">🐙 GitHub</a>
+    </div>
+
+    <div class="project-meta">
+      <span>HackNYU · Social Impact</span>
+    </div>
+
+    <p>
+      AI-powered app and Chrome extension that evaluates online videos for
+      children’s mental-health safety using age-specific scoring.
+    </p>
+    <ul>
+      <li>Designed a multi-metric algorithm analyzing pacing, language, narrative, and SEL signals.</li>
+      <li>Built an AI-driven content analysis pipeline using LLMs for transcription and semantic analysis.</li>
+      <li>Generated age-specific Development Scores and Brainrot Indexes.</li>
+    </ul>
+    <div class="tags">
+      <span class="tag">Algorithm Design</span>
+      <span class="tag">AI Systems</span>
+      <span class="tag">LLMs</span>
+      <span class="tag">Chrome Extension</span>
+    </div>
+  </div>
+
+  <!-- 3️⃣ Avalanche -->
+  <div class="project">
+    <div class="project-header">
+      <h3>🚀 Avalanche — AI Crypto Trading Assistant</h3>
+      <a href="https://github.com/savs02/avalanche"
+         target="_blank"
+         class="project-link">🐙 GitHub</a>
+    </div>
+
+    <div class="project-meta">
+      <span>Hackathon Project · Runner-Up (QRT Challenge)</span>
+    </div>
+
+    <p>
+      AI-powered crypto trading assistant built during a 24-hour hackathon.
+    </p>
+    <ul>
+      <li>Built backend services using Python, FastAPI, and Flask.</li>
+      <li>Integrated OpenAI, CoinGecko, and Crypto News APIs.</li>
+      <li>Added Twilio voice alerts and real-time dashboards.</li>
+    </ul>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">FastAPI</span>
+      <span class="tag">Flask</span>
+      <span class="tag">OpenAI API</span>
+      <span class="tag">Twilio</span>
+    </div>
+  </div>
+
+  <!-- 4️⃣ Strype -->
+  <div class="project">
+    <div class="project-header">
+      <h3>🎓 Strype — Gamification Feature Extension</h3>
+      <a href="https://github.com/Sanshiv123/Strype"
+         target="_blank"
+         class="project-link">🐙 GitHub</a>
+    </div>
+
+    <div class="project-meta">
+      <span>EdTech Platform Extension</span>
+    </div>
+
+    <p>
+      Extension of <strong>strype.org</strong>, a Python learning platform,
+      focused on improving learner engagement through gamification.
+    </p>
+    <ul>
+      <li>Designed badge and points progression logic based on code metrics and milestones.</li>
+      <li>Built a progress-tracking dashboard for 100+ learners using Vue.js and TypeScript.</li>
+      <li>Conducted usability testing and authored a 25,000-word dissertation.</li>
+    </ul>
+    <div class="tags">
+      <span class="tag">Vue.js</span>
+      <span class="tag">TypeScript</span>
+      <span class="tag">Product Design</span>
+      <span class="tag">User Research</span>
+    </div>
+  </div>
+
+  <!-- 5️⃣ Digital Journaling -->
+  <div class="project">
+    <div class="project-header">
+      <h3>📓 Infinite Loop Innovators — Digital Journaling Platform</h3>
+      <a href="https://github.com/k22049904/Infinite-Loop-Innovators"
+         target="_blank"
+         class="project-link">🐙 GitHub</a>
+    </div>
+
+    <div class="project-meta">
+      <span>Full-Stack Web Application</span>
+    </div>
+
+    <p>
+      Secure, responsive journaling platform built by a 5-member Agile team.
+    </p>
+    <ul>
+      <li>Implemented authentication and data persistence using Django and React.</li>
+      <li>Designed workflows for note creation, categorization, and retrieval.</li>
+      <li>Led feature coordination, code reviews, and testing.</li>
+    </ul>
+    <div class="tags">
+      <span class="tag">Django</span>
+      <span class="tag">React</span>
+      <span class="tag">REST APIs</span>
+      <span class="tag">SDLC</span>
+    </div>
+  </div>
+
 </section>
 
+
+
+
 <section>
-  <h2>Hackathons & Competitions</h2>
+  <h2>HACKATHONS & COMPETITIONS</h2>
 
-  <h3>Hack the Burgh 2025 — Runner Up (QRT Challenge)</h3>
-  <ul>
-    <li>Built an AI-powered crypto trading assist
+  <div class="hackathon-item">
+    <div class="hackathon-header">
+      <h3>🏆 Hack the Burgh 2025 — Runner Up (QRT Challenge)</h3>
+      <span class="hackathon-meta">University of Edinburgh</span>
+    </div>
+    <ul>
+      <li>Placed Runner-Up in Qube Research & Technology’s challenge.</li>
+      <li>Built <strong>Avalanche</strong>, an AI-powered crypto trading assistant.</li>
+    </ul>
+  </div>
 
+  <div class="hackathon-item">
+    <div class="hackathon-header">
+      <h3>🧠 HackNYU — MindSafe</h3>
+      <span class="hackathon-meta">New York University</span>
+    </div>
+    <ul>
+      <li>
+        Developed <strong>MindSafe</strong>, an app and Chrome extension ranking videos
+        by children’s mental-health safety.
+      </li>
+    </ul>
+  </div>
+
+  <div class="hackathon-item">
+    <div class="hackathon-header">
+      <h3>🥇 Microsoft Global Power Hackathon — Winner</h3>
+      <span class="hackathon-meta">Microsoft · EY · Pareto Economics</span>
+    </div>
+    <ul>
+      <li>Won 1st place for solution impact and delivery.</li>
+      <li>Built a 5G-readiness index dashboard using economic and infrastructure data.</li>
+    </ul>
+  </div>
+</section>
+  
+
+<section>
+  <h2>LEADERSHIP & AWARDS</h2>
+
+  <div class="leadership-list">
+
+    <div class="leadership-item">
+      <div class="leadership-icon">🏆</div>
+      <div class="leadership-content">
+        <strong>President — KCL Artificial Intelligence Society</strong>
+        <span>
+          Led 15+ workshops and talks for 200+ students; awarded the
+          <strong>KCLSU Silver Crown</strong> for outstanding leadership.
+        </span>
+      </div>
+    </div>
+
+    <div class="leadership-item">
+      <div class="leadership-icon">🤖</div>
+      <div class="leadership-content">
+        <strong>Head of AI Specialism — KCL Tech</strong>
+        <span>
+          Organized technical workshops and speaker sessions focused on applied AI
+          and industry use cases.
+        </span>
+      </div>
+    </div>
+
+    <div class="leadership-item">
+      <div class="leadership-icon">🤝</div>
+      <div class="leadership-content">
+        <strong>Mentor — NYU WoMentorship</strong>
+        <span>
+          Mentoring students in technical skill-building, career planning,
+          and academic transition.
+        </span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+</body>
+</html>
