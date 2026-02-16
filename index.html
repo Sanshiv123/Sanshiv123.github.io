@@ -13,28 +13,59 @@
       color: #222;
       line-height: 1.6;
     }
-  
+
     header {
       background: #0f172a;
       color: white;
-      padding: 50px;
-      position: relative;
-      text-align: left;
+      padding: 40px 50px;
     }
-  
+
+    .header-main {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .header-text {
+      flex: 1;
+      max-width: calc(100% - 160px);
+    }
+
+    .header-text h1 {
+      margin-top: 50px;
+      margin-bottom: 6px;
+    }
+
+    .header-text p {
+      margin-top: 0;
+      line-height: 1.5;
+    }
+
+    .header-photo {
+      width: 140px;
+      flex-shrink: 0;
+      margin-left: 20px;
+    }
+
+    .header-photo img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #e5e7eb;
+    }
+
     .header-links {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      font-size: 0.9rem;
+      margin-top: 0px;
+      margin-bottom: 10px;
     }
-  
+
     .header-links a {
       color: #e5e7eb;
-      margin-left: 15px;
+      margin-right: 10px;
       text-decoration: none;
     }
-  
+
     .header-links a:hover {
       text-decoration: underline;
     }
@@ -242,51 +273,114 @@
 <body>
 
 <header>
-  <img src="resources/photo.jpeg" alt="Sanchusri Kavitha Babu" class="profile-pic">
 
-  <div class="header-links">
-    <a href="mailto:sanchu2804kb@gmail.com">Email</a>
-    <a href="https://github.com/Sanshiv123" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/sanchusri-kavitha-babu-058231255/" target="_blank">LinkedIn</a>
+  <div class="header-main">
+
+    <div class="header-text">
+      <h1>Sanchusri Kavitha Babu</h1>
+      <p>
+        Backend & Distributed Systems Engineer | Kafka, Spark, Cloud Infrastructure | NYU MSCS
+      </p>
+    </div>
+
+    <div class="header-right">
+
+      <div class="header-links">
+        <a href="mailto:sanchu2804kb@gmail.com">Email</a>
+        <a href="https://github.com/Sanshiv123" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/sanchusri-kavitha-babu-058231255/" target="_blank">LinkedIn</a>
+      </div>
+
+      <div class="header-photo">
+        <img src="resources/photo.jpeg" alt="Sanchusri Kavitha Babu">
+      </div>
+
+    </div>
+
   </div>
 
-  <h1>Sanchusri Kavitha Babu</h1>
-  <p>Backend Software Engineer | Distributed Systems & Cloud</p>
 </header>
+
 
 <section>
   <h2>ABOUT ME</h2>
   <p>
-    I am a backend-focused software engineer currently pursuing an
+    I am a backend and distributed systems engineer currently pursuing an
     <strong>MSc in Computer Science at New York University</strong>,
-    with a <strong>First-Class BSc in Computer Science (Artificial Intelligence)</strong> from
-    <strong>King’s College London</strong>.
+    with a <strong>First-Class BSc in Computer Science (Artificial Intelligence)</strong>
+    from <strong>King’s College London</strong>.
   </p>
+
   <p>
-    I design and build scalable backend systems, distributed REST APIs,
-    and cloud-native applications. I am particularly interested in system design,
-    performance, and reliability, and in building production-ready software.
+    I specialize in designing and building scalable backend infrastructure,
+    distributed data pipelines, and cloud-native systems. My experience includes
+    building production REST APIs, implementing secure authentication systems,
+    and designing distributed streaming architectures using Kafka and Spark.
   </p>
+
+  <p>
+    I am particularly interested in solving scalability, reliability, and performance
+    challenges in large-scale backend systems, and I am currently seeking backend,
+    distributed systems, or infrastructure engineering internship opportunities.
+  </p>
+</section>
+
+<section>
+  <h2>SYSTEM DESIGN & DISTRIBUTED SYSTEMS</h2>
+  <p>
+    I specialize in designing scalable backend systems and distributed infrastructure
+    capable of handling production-scale workloads.
+  </p>
+  <ul>
+    <li>Designed distributed streaming pipelines using <strong>Apache Kafka</strong> and <strong>Apache Spark Structured Streaming</strong>.</li>
+    <li>Built scalable <strong>REST APIs</strong> supporting secure authentication and cloud-native deployments.</li>
+    <li>Architected cloud-native backend systems using <strong>Azure</strong>, <strong>Cosmos DB</strong>, and <strong>Docker</strong>.</li>
+    <li>Strong foundation in <strong>scalability</strong>, <strong>fault tolerance</strong>, <strong>consistency</strong>, and <strong>system reliability</strong>.</li>
+  </ul>
 </section>
 
 <section>
   <h2>TECHNICAL SKILLS</h2>
   <div class="skills">
-    <span>Python</span>
-    <span>Java</span>
+
+    <!-- Languages -->
+    <span><strong>Python</strong></span>
+    <span><strong>Java</strong></span>
     <span>C++</span>
     <span>JavaScript / TypeScript</span>
     <span>SQL</span>
-    <span>Node.js</span>
-    <span>Django</span>
+
+    <!-- Backend -->
+    <span><strong>Node.js</strong></span>
     <span>Flask</span>
-    <span>React</span>
-    <span>Vue.js</span>
-    <span>Azure</span>
-    <span>Docker</span>
+    <span>Django</span>
+    <span>REST API Design</span>
+
+    <!-- Distributed Systems / Infrastructure -->
+    <span><strong>Distributed Systems</strong></span>
+    <span><strong>System Design</strong></span>
+    <span>Backend Infrastructure</span>
+    <span><strong>Microservices</strong></span>
+
+    <!-- Data / Streaming -->
+    <span><strong>Apache Kafka</strong></span>
+    <span><strong>Apache Spark</strong></span>
+
+    <!-- Databases -->
+    <span><strong>PostgreSQL</strong></span>
+    <span><strong>MongoDB</strong></span>
+    <span>MySQL</span>
+    <span>NoSQL Databases</span>
+
+    <!-- Cloud / DevOps -->
+    <span><strong>Docker</strong></span>
+    <span><strong>Azure</strong></span>
+    <span>CI/CD</span>
     <span>Git</span>
-    <span>REST APIs</span>
-    <span>Distributed Systems</span>
+
+    <!-- Security -->
+    <span>Authentication (JWT, RBAC)</span>
+
   </div>
 </section>
 
@@ -299,14 +393,14 @@
       <span class="experience-meta">London, UK · Nov 2024 – May 2025</span>
     </div>
     <p>
-      Worked on backend systems for <strong>Smile-Shot</strong>, a cloud-based dental imaging
-      SaaS platform used in real clinical workflows.
+      Backend engineer for Smile-Shot, a cloud-based dental imaging SaaS platform used in production clinical workflows.
     </p>
     <ul>
-      <li>Designed and built distributed REST APIs supporting large medical image uploads, reducing latency by 30%.</li>
-      <li>Implemented JWT-based role-based access control across 15+ endpoints.</li>
-      <li>Migrated backend services from PostgreSQL to Azure Cosmos DB to improve scalability and fault tolerance.</li>
-      <li>Automated CI/CD pipelines on Azure to improve deployment speed and reliability.</li>
+      <li>Designed and built distributed <strong>REST APIs</strong> using <strong>Node.js</strong>, enabling scalable and reliable handling of large medical image uploads and reducing latency by 30%.</li>
+      <li>Implemented secure authentication and role-based access control using <strong>JWT</strong> and <strong>RBAC</strong> across 15+ endpoints.</li>      
+      <li>Migrated backend data infrastructure from <strong>PostgreSQL</strong> to <strong>Azure Cosmos DB</strong>, improving system scalability and fault tolerance.</li>      
+      <li>Automated <strong>CI/CD pipelines</strong> using <strong>Azure DevOps</strong>, enabling reliable deployments.</li>
+      <li>Contributed to backend <strong>system design</strong> decisions to improve scalability and reliability.</li>      
     </ul>
   </div>
 
@@ -316,13 +410,13 @@
       <span class="experience-meta">London, UK · Jun 2024 – Aug 2024</span>
     </div>
     <p>
-      Backend engineer for <strong>Play2Earn.ai</strong>, a crypto-reward gaming platform with
-      100+ active test users.
+      Backend engineer for <strong>Play2Earn.ai</strong>, a cloud-based crypto-reward platform supporting real-time user interactions.
     </p>
     <ul>
-      <li>Built 20+ scalable backend APIs using Node.js and MongoDB.</li>
-      <li>Designed Flask APIs and MySQL schemas to improve backend performance.</li>
-      <li>Contributed to an ML resume-analysis pipeline, improving classification accuracy by 15%.</li>
+      <li>Designed and implemented 20+ scalable <strong>REST APIs</strong> using <strong>Node.js</strong> and <strong>MongoDB</strong>, supporting core platform functionality including user management, rewards processing, and transaction workflows.</li>    
+      <li>Built backend services using <strong>Flask</strong> and <strong>MySQL</strong>, enabling efficient data storage, retrieval, and processing for production application workloads.</li>    
+      <li>Contributed to backend <strong>system architecture and service design</strong>, improving scalability, modularity, and reliability of distributed backend components.</li>
+      <li>Developed <strong>data preprocessing and backend processing pipelines</strong> using <strong>Python</strong>, supporting ML-driven application features and backend data workflows.</li>
     </ul>
   </div>
 
@@ -335,8 +429,9 @@
       AI internship focused on applied machine learning and data preprocessing.
     </p>
     <ul>
-      <li>Applied NLP techniques and neural networks using TensorFlow and Keras on 5K+ education records.</li>
-      <li>Built preprocessing pipelines to improve feature extraction and model training efficiency.</li>
+      <li>Developed ML preprocessing pipelines using <strong>Python</strong> and <strong>TensorFlow</strong> to process and prepare <strong>5K+ structured education records</strong>.</li>
+      <li>Implemented backend <strong>data transformation pipelines</strong> to improve feature extraction and model training efficiency.</li>
+      <li>Worked with structured datasets and backend <strong>processing workflows</strong> supporting ML model training and evaluation.</li>
     </ul>
   </div>
 
@@ -346,11 +441,11 @@
       <span class="experience-meta">May 2025 – Jul 2025</span>
     </div>
     <p>
-      Led a small team on a product research engagement in the early-career recruitment space.
+      Led a team on a product research and feature design initiative in the early-career recruitment space.
     </p>
     <ul>
-      <li>Analyzed 10+ competitor platforms focusing on personalization and notification systems.</li>
-      <li>Designed 12 UI mockups and prototypes that influenced implementation of 3 product features.</li>
+      <li>Analyzed 10+ competing platforms to evaluate <strong>system architecture</strong>, scalability considerations, and user workflows.</li>
+      <li>Designed 12 product features and <strong>system workflows</strong> adopted in early-stage product development.</li>
     </ul>
   </div>
 
@@ -364,8 +459,8 @@
     <div class="project-header">
       <h3>♟️ Chess Opening–to–Endgame Analytics Pipeline</h3>
       <a href="https://github.com/Sanshiv123/chess-opening-endgame-pipeline"
-         target="_blank"
-         class="project-link">🐙 GitHub</a>
+        target="_blank"
+        class="project-link">🐙 GitHub</a>
     </div>
 
     <div class="project-meta">
@@ -397,8 +492,8 @@
     <div class="project-header">
       <h3>🧠 MindSafe — AI Media Safety Platform</h3>
       <a href="https://github.com/TylersHub/MindSafe"
-         target="_blank"
-         class="project-link">🐙 GitHub</a>
+        target="_blank"
+        class="project-link">🐙 GitHub</a>
     </div>
 
     <div class="project-meta">
@@ -427,8 +522,8 @@
     <div class="project-header">
       <h3>🚀 Avalanche — AI Crypto Trading Assistant</h3>
       <a href="https://github.com/savs02/avalanche"
-         target="_blank"
-         class="project-link">🐙 GitHub</a>
+        target="_blank"
+        class="project-link">🐙 GitHub</a>
     </div>
 
     <div class="project-meta">
@@ -457,8 +552,8 @@
     <div class="project-header">
       <h3>🎓 Strype — Gamification Feature Extension</h3>
       <a href="https://github.com/Sanshiv123/Strype"
-         target="_blank"
-         class="project-link">🐙 GitHub</a>
+        target="_blank"
+        class="project-link">🐙 GitHub</a>
     </div>
 
     <div class="project-meta">
@@ -487,8 +582,8 @@
     <div class="project-header">
       <h3>📓 Infinite Loop Innovators — Digital Journaling Platform</h3>
       <a href="https://github.com/k22049904/Infinite-Loop-Innovators"
-         target="_blank"
-         class="project-link">🐙 GitHub</a>
+        target="_blank"
+        class="project-link">🐙 GitHub</a>
     </div>
 
     <div class="project-meta">
@@ -512,8 +607,6 @@
   </div>
 
 </section>
-
-
 
 
 <section>
