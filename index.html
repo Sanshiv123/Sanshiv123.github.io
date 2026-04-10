@@ -1,696 +1,633 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Sanchusri Kavitha Babu | Software Engineer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<title>Sanchusri Kavitha Babu | Software Engineer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+:root {
+--bg: #0a0a0f;
+--surface: #12121a;
+--surface2: #1a1a26;
+--border: rgba(255,255,255,0.07);
+--accent: #6ee7b7;
+--accent2: #818cf8;
+--accent3: #f472b6;
+--text: #e2e8f0;
+--muted: #64748b;
+--white: #ffffff;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+font-family: 'DM Sans', sans-serif;
+background: var(--bg);
+color: var(--text);
+line-height: 1.7;
+overflow-x: hidden;
+}
+nav {
+position: fixed;
+top: 0; left: 0; right: 0;
+z-index: 100;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 60px;
+background: rgba(10,10,15,0.85);
+backdrop-filter: blur(12px);
+border-bottom: 1px solid var(--border);
+}
+.nav-logo {
+font-family: 'Syne', sans-serif;
+font-weight: 800;
+font-size: 1.1rem;
+color: var(--white);
+letter-spacing: -0.02em;
+}
+.nav-links { display: flex; gap: 36px; list-style: none; }
+.nav-links a {
+color: var(--muted);
+text-decoration: none;
+font-size: 0.875rem;
+font-weight: 500;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--accent); }
+.hero {
+min-height: 100vh;
+display: flex;
+align-items: center;
+padding: 120px 60px 80px;
+position: relative;
+overflow: hidden;
+}
+.hero::before {
+content: '';
+position: absolute;
+top: -200px; right: -200px;
+width: 600px; height: 600px;
+background: radial-gradient(circle, rgba(110,231,183,0.08) 0%, transparent 70%);
+pointer-events: none;
+}
+.hero::after {
+content: '';
+position: absolute;
+bottom: -100px; left: -100px;
+width: 500px; height: 500px;
+background: radial-gradient(circle, rgba(129,140,248,0.06) 0%, transparent 70%);
+pointer-events: none;
+}
+.hero-inner {
+max-width: 1100px;
+margin: 0 auto;
+width: 100%;
+display: grid;
+grid-template-columns: 1fr auto;
+gap: 60px;
+align-items: center;
+}
+.hero-tag {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+background: rgba(110,231,183,0.1);
+border: 1px solid rgba(110,231,183,0.2);
+color: var(--accent);
+font-size: 0.8rem;
+font-weight: 500;
+padding: 6px 14px;
+border-radius: 100px;
+margin-bottom: 24px;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+}
+.hero-tag::before {
+content: '';
+width: 6px; height: 6px;
+background: var(--accent);
+border-radius: 50%;
+animation: pulse 2s infinite;
+}
+@keyframes pulse {
+0%, 100% { opacity: 1; transform: scale(1); }
+50% { opacity: 0.5; transform: scale(0.8); }
+}
+.hero h1 {
+font-family: 'Syne', sans-serif;
+font-size: clamp(2.8rem, 5vw, 4.5rem);
+font-weight: 800;
+line-height: 1.05;
+letter-spacing: -0.03em;
+color: var(--white);
+margin-bottom: 20px;
+}
+.hero h1 .highlight {
+background: linear-gradient(135deg, var(--accent), var(--accent2));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+.hero-sub {
+font-size: 1.1rem;
+color: var(--muted);
+font-weight: 300;
+max-width: 520px;
+margin-bottom: 36px;
+line-height: 1.8;
+}
+.hero-links { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn-primary {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+background: var(--accent);
+color: #0a0a0f;
+font-weight: 600;
+font-size: 0.875rem;
+padding: 12px 24px;
+border-radius: 8px;
+text-decoration: none;
+transition: all 0.2s;
+letter-spacing: 0.01em;
+}
+.btn-primary:hover { background: #4ade80; transform: translateY(-1px); }
+.btn-ghost {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+background: transparent;
+color: var(--text);
+font-weight: 500;
+font-size: 0.875rem;
+padding: 12px 24px;
+border-radius: 8px;
+border: 1px solid var(--border);
+text-decoration: none;
+transition: all 0.2s;
+}
+.btn-ghost:hover { border-color: rgba(255,255,255,0.2); background: var(--surface); }
+.hero-photo { position: relative; }
+.hero-photo img {
+width: 200px;
+height: 200px;
+border-radius: 20px;
+object-fit: cover;
+border: 1px solid var(--border);
+display: block;
+}
+.hero-photo::before {
+content: '';
+position: absolute;
+inset: -2px;
+border-radius: 22px;
+background: linear-gradient(135deg, var(--accent), var(--accent2), var(--accent3));
+z-index: -1;
+opacity: 0.5;
+}
+.stats {
+border-top: 1px solid var(--border);
+border-bottom: 1px solid var(--border);
+padding: 28px 60px;
+display: flex;
+justify-content: center;
+gap: 0;
+}
+.stat { flex: 1; max-width: 200px; text-align: center; padding: 0 24px; border-right: 1px solid var(--border); }
+.stat:last-child { border-right: none; }
+.stat-num {
+font-family: 'Syne', sans-serif;
+font-size: 1.8rem;
+font-weight: 800;
+color: var(--white);
+display: block;
+line-height: 1;
+margin-bottom: 4px;
+}
+.stat-label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.section { max-width: 1100px; margin: 0 auto; padding: 80px 60px; }
+.section-label { font-size: 0.75rem; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; }
+.section-title { font-family: 'Syne', sans-serif; font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800; color: var(--white); letter-spacing: -0.02em; margin-bottom: 48px; line-height: 1.15; }
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      color: #222;
-      line-height: 1.6;
-    }
+/* SKILLS — boxes */
+.skills-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+gap: 14px;
+}
+.skill-card {
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: 12px;
+padding: 20px 22px;
+transition: border-color 0.2s, transform 0.2s;
+}
+.skill-card:hover {
+border-color: rgba(110,231,183,0.3);
+transform: translateY(-2px);
+}
+.skill-card-title {
+font-family: 'Syne', sans-serif;
+font-size: 0.78rem;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 0.08em;
+color: var(--accent);
+margin-bottom: 12px;
+}
+.skill-tags {
+display: flex;
+flex-wrap: wrap;
+gap: 5px;
+}
+.skill-tag {
+background: var(--surface2);
+color: var(--text);
+font-size: 0.835rem;
+padding: 4px 10px;
+border-radius: 6px;
+font-weight: 400;
+}
 
-    header {
-      background: #0f172a;
-      color: white;
-      padding: 40px 50px;
-    }
+.exp-list { display: flex; flex-direction: column; gap: 0; }
+.exp-item { display: grid; grid-template-columns: 160px 1fr; gap: 32px; padding: 36px 0; border-bottom: 1px solid var(--border); }
+.exp-item:first-child { padding-top: 0; }
+.exp-item:last-child { border-bottom: none; }
+.exp-date { font-size: 0.8rem; color: var(--muted); font-weight: 400; padding-top: 4px; line-height: 1.6; }
+.exp-right h3 { font-family: 'Syne', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 2px; }
+.exp-right .exp-company { font-size: 0.85rem; color: var(--accent); margin-bottom: 12px; font-weight: 500; }
+.exp-right ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.exp-right ul li { font-size: 0.9rem; color: var(--muted); padding-left: 16px; position: relative; line-height: 1.6; }
+.exp-right ul li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-size: 0.75rem; top: 2px; }
+.exp-right ul li strong { color: var(--text); font-weight: 500; }
 
-    .header-main {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+.project-card {
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: 16px;
+padding: 28px;
+display: flex;
+flex-direction: column;
+transition: border-color 0.2s, transform 0.2s;
+position: relative;
+overflow: hidden;
+}
+.project-card::before {
+content: '';
+position: absolute;
+top: 0; left: 0; right: 0;
+height: 2px;
+background: linear-gradient(90deg, var(--accent), var(--accent2));
+opacity: 0;
+transition: opacity 0.2s;
+}
+.project-card:hover { border-color: rgba(110,231,183,0.2); transform: translateY(-3px); }
+.project-card:hover::before { opacity: 1; }
+.project-badge {
+display: inline-flex;
+align-items: center;
+gap: 6px;
+font-size: 0.72rem;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 0.06em;
+padding: 4px 10px;
+border-radius: 100px;
+margin-bottom: 16px;
+width: fit-content;
+}
+.badge-win { background: rgba(110,231,183,0.1); color: var(--accent); border: 1px solid rgba(110,231,183,0.2); }
+.badge-hack { background: rgba(129,140,248,0.1); color: var(--accent2); border: 1px solid rgba(129,140,248,0.2); }
+.badge-project { background: rgba(244,114,182,0.1); color: var(--accent3); border: 1px solid rgba(244,114,182,0.2); }
+.project-card h3 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 10px; line-height: 1.3; }
+.project-card p { font-size: 0.875rem; color: var(--muted); line-height: 1.7; flex: 1; margin-bottom: 20px; }
+.project-footer { display: flex; justify-content: space-between; align-items: center; }
+.project-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.project-tag { background: var(--surface2); color: var(--muted); font-size: 0.72rem; padding: 3px 8px; border-radius: 4px; }
+.project-link { color: var(--accent); font-size: 0.8rem; text-decoration: none; font-weight: 500; white-space: nowrap; margin-left: 12px; }
+.project-link:hover { text-decoration: underline; }
 
-    .header-text {
-      flex: 1;
-      max-width: calc(100% - 160px);
-    }
+.hackathon-list { display: flex; flex-direction: column; gap: 16px; }
+.hackathon-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px 28px; display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; transition: border-color 0.2s; }
+.hackathon-card:hover { border-color: rgba(110,231,183,0.25); }
+.hack-left { flex: 1; }
+.hack-award { display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #fbbf24; margin-bottom: 8px; }
+.hackathon-card h3 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+.hackathon-card p { font-size: 0.875rem; color: var(--muted); line-height: 1.6; }
+.hack-right { text-align: right; white-space: nowrap; }
+.hack-org { font-size: 0.78rem; color: var(--muted); line-height: 1.8; }
 
-    .header-text h1 {
-      margin-top: 50px;
-      margin-bottom: 6px;
-    }
+.leadership-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+.leadership-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; display: flex; gap: 16px; transition: border-color 0.2s; }
+.leadership-card:hover { border-color: rgba(110,231,183,0.2); }
+.leadership-icon { font-size: 1.4rem; line-height: 1; flex-shrink: 0; }
+.leadership-card h3 { font-family: 'Syne', sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+.leadership-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
 
-    .header-text p {
-      margin-top: 0;
-      line-height: 1.5;
-    }
-
-    .header-photo {
-      width: 140px;
-      flex-shrink: 0;
-      margin-left: 20px;
-    }
-
-    .header-photo img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid #e5e7eb;
-    }
-
-    .header-links {
-      margin-top: 0px;
-      margin-bottom: 10px;
-    }
-
-    .header-links a {
-      color: #e5e7eb;
-      margin-right: 10px;
-      text-decoration: none;
-    }
-
-    .header-links a:hover {
-      text-decoration: underline;
-    }
-
-    .profile-pic {
-      position: absolute;
-      top: 60px;
-      right: 50px;
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid #e5e7eb;
-    }
-  
-    section {
-      max-width: 900px;
-      margin: 30px auto;
-      background: white;
-      padding: 10px 28px 24px;
-      border-radius: 10px;
-    }
-  
-    h2 {
-      border-bottom: 2px solid #eee;
-      padding-bottom: 8px;
-      margin-bottom: 10px;
-    }
-
-    header h1 {
-      margin-bottom: 2px;
-    }
-
-    header p {
-      margin-top: 0;
-    }
-
-    .skills {
-      margin-top: 10px;
-    }
-
-    .skills span {
-      display: inline-block;
-      background: #e5e7eb;
-      color: #111827;
-      margin: 6px 6px 0 0;
-      padding: 6px 12px;
-      border-radius: 20px;
-      font-size: 0.9rem;
-    }
-    
-    .experience-item {
-      padding-bottom: 12px;
-      margin-bottom: 12px;
-      border-bottom: 1px solid #e5e7eb;
-    }
-
-    .experience-item:last-child {
-      border-bottom: none;
-    }
-
-    .experience-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 16px;
-    }
-
-    .experience-header h3 {
-      margin: 0;
-    }
-
-    .experience-meta {
-      font-size: 0.85rem;
-      color: #6b7280;
-      white-space: nowrap;
-    }
-
-    .project {
-      padding: 12px 0;
-      border-bottom: 1px solid #e5e7eb;
-    }
-
-    .project:last-child {
-      border-bottom: none;
-    }
-
-    .project h3 {
-      margin-bottom: 6px;
-    }
-
-    .project-meta {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.9rem;
-      margin-bottom: 8px;
-    }
-
-    .project-meta a {
-      text-decoration: none;
-      color: #2563eb;
-      font-weight: 500;
-    }
-
-    .project-meta a:hover {
-      text-decoration: underline;
-    }
-
-    .project-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 16px;
-    }
-
-    .project-link {
-      font-size: 0.9rem;
-      text-decoration: none;
-      color: #2563eb;
-      white-space: nowrap;
-    }
-
-    .project-link:hover {
-      text-decoration: underline;
-    }
-
-    .tags {
-      margin-top: 8px;
-    }
-
-    .tag {
-      display: inline-block;
-      background: #f1f5f9;
-      color: #0f172a;
-      font-size: 0.75rem;
-      padding: 4px 8px;
-      border-radius: 6px;
-      margin-right: 6px;
-      margin-top: 6px;
-    }
-
-    .hackathon-item {
-      padding: 16px 20px;
-      margin-bottom: 18px;
-      border-left: 4px solid #2563eb; /* blue accent */
-      background: #f8fafc;
-      border-radius: 6px;
-    }
-
-    .hackathon-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 16px;
-    }
-
-    .hackathon-header h3 {
-      margin: 0;
-      font-size: 1.05rem;
-    }
-
-    .hackathon-meta {
-      font-size: 0.85rem;
-      color: #6b7280;
-      white-space: nowrap;
-    }
-
-    .leadership-list {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .leadership-item {
-      display: flex;
-      gap: 14px;
-      padding: 16px 18px;
-      background: #f8fafc;
-      border-left: 4px solid #16a34a; /* green accent for leadership */
-      border-radius: 6px;
-    }
-
-    .leadership-icon {
-      font-size: 1.4rem;
-      line-height: 1.4;
-    }
-
-    .leadership-title {
-      display: block;
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: 2px;
-    }
-
-    .leadership-content span {
-      display: block;
-      font-size: 0.9rem;
-      color: #374151;
-    }
-
-  </style>
+footer { border-top: 1px solid var(--border); padding: 40px 60px; text-align: center; }
+footer p { font-size: 0.85rem; color: var(--muted); }
+footer a { color: var(--accent); text-decoration: none; }
+.divider { border: none; border-top: 1px solid var(--border); margin: 0 60px; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.hero-inner { animation: fadeUp 0.7s ease both; }
+</style>
 </head>
-
 <body>
 
-<header>
+<nav>
+<div class="nav-logo">SKB</div>
+<ul class="nav-links">
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#hackathons">Hackathons</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
 
-  <div class="header-main">
-
-    <div class="header-text">
-      <h1>Sanchusri Kavitha Babu</h1>
-      <p>
-        Backend & Distributed Systems Engineer | Kafka, Spark, Cloud Infrastructure | NYU MSCS
-      </p>
-    </div>
-
-    <div class="header-right">
-
-      <div class="header-links">
-        <a href="mailto:sanchu2804kb@gmail.com">Email</a>
-        <a href="https://github.com/Sanshiv123" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/sanchusri-kavitha-babu-058231255/" target="_blank">LinkedIn</a>
-      </div>
-
-      <div class="header-photo">
-        <img src="resources/photo.jpeg" alt="Sanchusri Kavitha Babu">
-      </div>
-
-    </div>
-
-  </div>
-
-</header>
-
-
-<section>
-  <h2>ABOUT ME</h2>
-  <p>
-    I am a backend and distributed systems engineer currently pursuing an
-    <strong>MSc in Computer Science at New York University</strong>,
-    with a <strong>First-Class BSc in Computer Science (Artificial Intelligence)</strong>
-    from <strong>King’s College London</strong>.
-  </p>
-
-  <p>
-    I specialize in designing and building scalable backend infrastructure,
-    distributed data pipelines, and cloud-native systems. My experience includes
-    building production REST APIs, implementing secure authentication systems,
-    and designing distributed streaming architectures using Kafka and Spark.
-  </p>
-
-  <p>
-    I am particularly interested in solving scalability, reliability, and performance
-    challenges in large-scale backend systems, and I am currently seeking backend,
-    distributed systems, or infrastructure engineering internship opportunities.
-  </p>
+<section class="hero">
+<div class="hero-inner">
+<div>
+<div class="hero-tag">Open to Summer 2026 Internships</div>
+<h1>Sanchusri<br><span class="highlight">Kavitha Babu</span></h1>
+<p class="hero-sub">MS CS at NYU Tandon · Backend &amp; Distributed Systems Engineer · Building AI pipelines, scalable APIs, and data infrastructure that ships to production.</p>
+<div class="hero-links">
+<a href="mailto:sanchu2804kb@gmail.com" class="btn-primary">Get in Touch</a>
+<a href="https://github.com/Sanshiv123" target="_blank" class="btn-ghost">GitHub</a>
+<a href="https://www.linkedin.com/in/sanchusri-kavitha-babu-058231255/" target="_blank" class="btn-ghost">LinkedIn</a>
+</div>
+</div>
+<div class="hero-photo">
+<img src="resources/photo.jpeg" alt="Sanchusri Kavitha Babu">
+</div>
+</div>
 </section>
 
-<section>
-  <h2>SYSTEM DESIGN & DISTRIBUTED SYSTEMS</h2>
-  <p>
-    I specialize in designing scalable backend systems and distributed infrastructure
-    capable of handling production-scale workloads.
-  </p>
-  <ul>
-    <li>Designed distributed streaming pipelines using <strong>Apache Kafka</strong> and <strong>Apache Spark Structured Streaming</strong>.</li>
-    <li>Built scalable <strong>REST APIs</strong> supporting secure authentication and cloud-native deployments.</li>
-    <li>Architected cloud-native backend systems using <strong>Azure</strong>, <strong>Cosmos DB</strong>, and <strong>Docker</strong>.</li>
-    <li>Strong foundation in <strong>scalability</strong>, <strong>fault tolerance</strong>, <strong>consistency</strong>, and <strong>system reliability</strong>.</li>
-  </ul>
-</section>
+<div class="stats">
+<div class="stat"><span class="stat-num">3.90</span><span class="stat-label">NYU GPA</span></div>
+<div class="stat"><span class="stat-num">3</span><span class="stat-label">Hackathon Wins</span></div>
+<div class="stat"><span class="stat-num">500K+</span><span class="stat-label">Records Processed</span></div>
+<div class="stat"><span class="stat-num">20+</span><span class="stat-label">Production APIs</span></div>
+<div class="stat"><span class="stat-num">2</span><span class="stat-label">Production Roles</span></div>
+</div>
 
-<section>
-  <h2>TECHNICAL SKILLS</h2>
-  <div class="skills">
+<hr class="divider">
+<div class="section" id="skills">
+<div class="section-label">What I work with</div>
+<div class="section-title">Technical Skills</div>
+<div class="skills-grid">
+<div class="skill-card">
+<div class="skill-card-title">Languages</div>
+<div class="skill-tags">
+<span class="skill-tag">Python</span><span class="skill-tag">Java</span><span class="skill-tag">C++</span><span class="skill-tag">TypeScript</span><span class="skill-tag">JavaScript</span><span class="skill-tag">SQL</span><span class="skill-tag">Scala</span>
+</div>
+</div>
+<div class="skill-card">
+<div class="skill-card-title">Backend & APIs</div>
+<div class="skill-tags">
+<span class="skill-tag">Node.js</span><span class="skill-tag">Flask</span><span class="skill-tag">Django</span><span class="skill-tag">FastAPI</span><span class="skill-tag">Express.js</span><span class="skill-tag">REST APIs</span><span class="skill-tag">Microservices</span><span class="skill-tag">Postman</span>
+</div>
+</div>
+<div class="skill-card">
+<div class="skill-card-title">Distributed Systems</div>
+<div class="skill-tags">
+<span class="skill-tag">Apache Kafka</span><span class="skill-tag">Apache Spark</span><span class="skill-tag">Hadoop</span><span class="skill-tag">PySpark</span><span class="skill-tag">ETL Pipelines</span><span class="skill-tag">Lambda Architecture</span><span class="skill-tag">Streaming</span>
+</div>
+</div>
+<div class="skill-card">
+<div class="skill-card-title">Databases</div>
+<div class="skill-tags">
+<span class="skill-tag">PostgreSQL</span><span class="skill-tag">MongoDB</span><span class="skill-tag">MySQL</span><span class="skill-tag">Cosmos DB</span><span class="skill-tag">VectorAI DB</span><span class="skill-tag">DynamoDB</span><span class="skill-tag">Redis</span>
+</div>
+</div>
+<div class="skill-card">
+<div class="skill-card-title">Frontend</div>
+<div class="skill-tags">
+<span class="skill-tag">React</span><span class="skill-tag">Vue.js</span><span class="skill-tag">D3.js</span><span class="skill-tag">HTML / CSS</span><span class="skill-tag">Chrome Extensions</span>
+</div>
+</div>
+<div class="skill-card">
+<div class="skill-card-title">Cloud & DevOps</div>
+<div class="skill-tags">
+<span class="skill-tag">Azure</span><span class="skill-tag">AWS</span><span class="skill-tag">Databricks</span><span class="skill-tag">Docker</span><span class="skill-tag">CI/CD</span><span class="skill-tag">Git</span><span class="skill-tag">JWT / RBAC</span>
+</div>
+</div>
+<div class="skill-card">
+<div class="skill-card-title">AI & ML</div>
+<div class="skill-tags">
+<span class="skill-tag">RAG Pipelines</span><span class="skill-tag">XGBoost</span><span class="skill-tag">Scikit-learn</span><span class="skill-tag">LLM Integration</span><span class="skill-tag">TensorFlow</span><span class="skill-tag">Pandas</span><span class="skill-tag">NumPy</span><span class="skill-tag">SciPy</span><span class="skill-tag">Gemini API</span>
+</div>
+</div>
+<div class="skill-card">
+<div class="skill-card-title">Quant Methods</div>
+<div class="skill-tags">
+<span class="skill-tag">Time Series</span><span class="skill-tag">Regression Modelling</span><span class="skill-tag">Causal Inference</span><span class="skill-tag">Prediction Market</span><span class="skill-tag">Financial Modelling</span>
+</div>
+</div>
+</div>
+</div>
 
-    <!-- Languages -->
-    <span><strong>Python</strong></span>
-    <span><strong>Java</strong></span>
-    <span>C++</span>
-    <span>JavaScript / TypeScript</span>
-    <span>SQL</span>
+<hr class="divider">
+<div class="section" id="experience">
+<div class="section-label">Where I've worked</div>
+<div class="section-title">Experience</div>
+<div class="exp-list">
+<div class="exp-item">
+<div class="exp-date">Nov 2024 – May 2025<br>London, UK</div>
+<div class="exp-right">
+<h3>Software Engineer</h3>
+<div class="exp-company">King's Labs · Healthcare SaaS</div>
+<ul>
+<li>Built distributed <strong>REST APIs</strong> (Node/Express.js) for Smile-Shot, a dental imaging SaaS — reducing upload latency by <strong>30%</strong>.</li>
+<li>Implemented <strong>JWT + RBAC</strong> access control across 15+ endpoints with zero-downtime deployments.</li>
+<li>Automated <strong>CI/CD pipelines</strong> on Azure DevOps, cutting deployment time by <strong>30 minutes per release</strong>.</li>
+<li>Migrated <strong>PostgreSQL → Azure Cosmos DB</strong>, improving query performance by <strong>28%</strong> in production.</li>
+</ul>
+</div>
+</div>
+<div class="exp-item">
+<div class="exp-date">Jun – Aug 2024<br>London, UK</div>
+<div class="exp-right">
+<h3>Software Engineering Intern</h3>
+<div class="exp-company">SmallCap.AI · Fintech</div>
+<ul>
+<li>Built <strong>20+ scalable REST APIs</strong> (Node.js + MongoDB) for Play2Earn.ai — 100+ live users, improving throughput by <strong>35%</strong>.</li>
+<li>Designed <strong>Flask microservices</strong> and MySQL schemas cutting query latency by <strong>25ms</strong>.</li>
+<li>Built <strong>ML preprocessing pipeline</strong> (Pandas, NumPy, Scikit-learn) — <strong>15% accuracy improvement</strong> in CV classification.</li>
+<li>Deployed <strong>Postman validation suites</strong> + regression testing ensuring <strong>99% uptime</strong>.</li>
+</ul>
+</div>
+</div>
+<div class="exp-item">
+<div class="exp-date">Jul – Sep 2023<br>Remote</div>
+<div class="exp-right">
+<h3>AI Intern</h3>
+<div class="exp-company">Skolar Edu Tech · EdTech</div>
+<ul>
+<li>Developed ML preprocessing pipelines using <strong>Python + TensorFlow</strong> processing 5K+ education records.</li>
+<li>Built backend data transformation workflows improving feature extraction and model training efficiency.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 
-    <!-- Backend -->
-    <span><strong>Node.js</strong></span>
-    <span>Flask</span>
-    <span>Django</span>
-    <span>REST API Design</span>
+<hr class="divider">
+<div class="section" id="projects">
+<div class="section-label">What I've built</div>
+<div class="section-title">Projects</div>
+<div class="projects-grid">
 
-    <!-- Distributed Systems / Infrastructure -->
-    <span><strong>Distributed Systems</strong></span>
-    <span><strong>System Design</strong></span>
-    <span>Backend Infrastructure</span>
-    <span><strong>Microservices</strong></span>
+<div class="project-card">
+<div class="project-badge badge-win">🏆 2nd Place · Hacklytics 2026</div>
+<h3>BLINDSPOT — AI Capital Allocation Engine</h3>
+<p>Production-grade RAG pipeline indexing 2,388 UN documents using Actian VectorAI DB. XGBoost severity scoring across 5 datasets. SciPy optimizer. Gemini 2.5 Flash LLM embedded in the platform. Built and trained on Databricks in 36 hours.</p>
+<div class="project-footer">
+<div class="project-tags">
+<span class="project-tag">RAG</span><span class="project-tag">XGBoost</span><span class="project-tag">Databricks</span><span class="project-tag">VectorAI DB</span>
+</div>
+<a href="https://github.com/Hidhayath-Nisha/blindspotv" target="_blank" class="project-link">GitHub →</a>
+</div>
+</div>
 
-    <!-- Data / Streaming -->
-    <span><strong>Apache Kafka</strong></span>
-    <span><strong>Apache Spark</strong></span>
+<div class="project-card">
+<div class="project-badge badge-win">YHacks 2026</div>
+<h3>PolyHedge — Prediction Market Hedging Platform</h3>
+<p>Full-stack platform connecting leveraged crypto positions to live Polymarket contracts. Proprietary Alpha Score (0–100) across 4 weighted dimensions detecting mispricing. K2 Think V2 AI for hedge ratio optimization.</p>
+<div class="project-footer">
+<div class="project-tags">
+<span class="project-tag">Python</span><span class="project-tag">Polymarket API</span><span class="project-tag">K2 AI</span><span class="project-tag">Auth0</span>
+</div>
+<a href="https://github.com/janesanjana4/PolyHedge" target="_blank" class="project-link">GitHub →</a>
+</div>
+</div>
 
-    <!-- Databases -->
-    <span><strong>PostgreSQL</strong></span>
-    <span><strong>MongoDB</strong></span>
-    <span>MySQL</span>
-    <span>NoSQL Databases</span>
+<div class="project-card">
+<div class="project-badge badge-project">Big Data · NYU</div>
+<h3>Chess Opening-to-Endgame Analytics Pipeline</h3>
+<p>Distributed batch-streaming pipeline processing 500K+ chess games (~80M moves). Lambda architecture with Spark Structured Streaming achieving sub-2s micro-batch latency. CNN trained on FEN-encoded board states.</p>
+<div class="project-footer">
+<div class="project-tags">
+<span class="project-tag">Hadoop</span><span class="project-tag">Spark</span><span class="project-tag">Kafka</span><span class="project-tag">MongoDB</span>
+</div>
+<a href="https://github.com/Sanshiv123/chess-opening-endgame-pipeline" target="_blank" class="project-link">GitHub →</a>
+</div>
+</div>
 
-    <!-- Cloud / DevOps -->
-    <span><strong>Docker</strong></span>
-    <span><strong>Azure</strong></span>
-    <span>CI/CD</span>
-    <span>Git</span>
+<div class="project-card">
+<div class="project-badge badge-hack">HackNYU 2025</div>
+<h3>MindSafe — AI Media Safety Platform</h3>
+<p>LLM-powered media analysis platform built in 24 hours. Multi-metric scoring algorithm using LLM transcription and semantic analysis across 8 developmental metrics. Shipped as web app and Chrome extension.</p>
+<div class="project-footer">
+<div class="project-tags">
+<span class="project-tag">LLMs</span><span class="project-tag">Semantic Analysis</span><span class="project-tag">React</span>
+</div>
+<a href="https://github.com/TylersHub/MindSafe" target="_blank" class="project-link">GitHub →</a>
+</div>
+</div>
 
-    <!-- Security -->
-    <span>Authentication (JWT, RBAC)</span>
+<div class="project-card">
+<div class="project-badge badge-project">Dissertation · KCL</div>
+<h3>Strype — Gamification Feature Extension</h3>
+<p>End-to-end gamification for strype.org, a live coding education platform. 20+ badges, rule-based point progression, real-time progress dashboard for 250+ users. 25,000-word empirical research dissertation.</p>
+<div class="project-footer">
+<div class="project-tags">
+<span class="project-tag">Vue.js</span><span class="project-tag">TypeScript</span><span class="project-tag">User Research</span>
+</div>
+<a href="https://github.com/Sanshiv123/Strype" target="_blank" class="project-link">GitHub →</a>
+</div>
+</div>
 
-  </div>
-</section>
+<div class="project-card">
+<div class="project-badge badge-project">Team Project · Django</div>
+<h3>Digital Journaling Platform</h3>
+<p>Full-stack journaling web app built by a 5-member Agile team at KCL. Secure authentication, note creation, categorisation, and data persistence — coordinated across sprints with code reviews and QA testing.</p>
+<div class="project-footer">
+<div class="project-tags">
+<span class="project-tag">Django</span><span class="project-tag">React</span><span class="project-tag">PostgreSQL</span><span class="project-tag">REST APIs</span>
+</div>
+<a href="https://github.com/k22049904/Infinite-Loop-Innovators" target="_blank" class="project-link">GitHub →</a>
+</div>
+</div>
 
-<section>
-  <h2>EXPERIENCE</h2>
+</div>
+</div>
 
-  <div class="experience-item">
-    <div class="experience-header">
-      <h3>King’s Labs — Software Engineer</h3>
-      <span class="experience-meta">London, UK · Nov 2024 – May 2025</span>
-    </div>
-    <p>
-      Backend engineer for Smile-Shot, a cloud-based dental imaging SaaS platform used in production clinical workflows.
-    </p>
-    <ul>
-      <li>Designed and built distributed <strong>REST APIs</strong> using <strong>Node.js</strong>, enabling scalable and reliable handling of large medical image uploads and reducing latency by 30%.</li>
-      <li>Implemented secure authentication and role-based access control using <strong>JWT</strong> and <strong>RBAC</strong> across 15+ endpoints.</li>      
-      <li>Migrated backend data infrastructure from <strong>PostgreSQL</strong> to <strong>Azure Cosmos DB</strong>, improving system scalability and fault tolerance.</li>      
-      <li>Automated <strong>CI/CD pipelines</strong> using <strong>Azure DevOps</strong>, enabling reliable deployments.</li>
-      <li>Contributed to backend <strong>system design</strong> decisions to improve scalability and reliability.</li>      
-    </ul>
-  </div>
+<hr class="divider">
+<div class="section" id="hackathons">
+<div class="section-label">Competed & placed</div>
+<div class="section-title">Hackathons & Competitions</div>
+<div class="hackathon-list">
+<div class="hackathon-card">
+<div class="hack-left">
+<div class="hack-award">🏆 2nd Place — Fintech Track</div>
+<h3>Hacklytics 2026 — BLINDSPOT</h3>
+<p>AI capital allocation engine for humanitarian crises. RAG over 2,388 UN documents, XGBoost scoring, SciPy optimizer, Gemini 2.5 Flash. Built on Databricks in 36 hours.</p>
+</div>
+<div class="hack-right"><div class="hack-org">Databricks<br>UN · Actian<br>Feb 2026</div></div>
+</div>
+<div class="hackathon-card">
+<div class="hack-left">
+<div class="hack-award">🥈 Runner-Up — QRT Challenge</div>
+<h3>Hack the Burgh 2025 — Avalanche</h3>
+<p>AI-powered crypto trading assistant with real-time dashboards, Twilio voice alerts, and live market data integration. Built in 24 hours.</p>
+</div>
+<div class="hack-right"><div class="hack-org">Optiver<br>QRT · G-Research<br>Mar 2025</div></div>
+</div>
+<div class="hackathon-card">
+<div class="hack-left">
+<div class="hack-award">🥇 1st Place — Winner</div>
+<h3>Global Power Hackathon 2022</h3>
+<p>5G-readiness index dashboard integrating economic metrics with interactive data visualization. Outperformed 6–7 competing teams.</p>
+</div>
+<div class="hack-right"><div class="hack-org">Microsoft<br>EY · Pareto Economics<br>Nov 2022</div></div>
+</div>
+</div>
+</div>
 
-  <div class="experience-item">
-    <div class="experience-header">
-      <h3>Smallcap.ai — Software Engineering Intern</h3>
-      <span class="experience-meta">London, UK · Jun 2024 – Aug 2024</span>
-    </div>
-    <p>
-      Backend engineer for <strong>Play2Earn.ai</strong>, a cloud-based crypto-reward platform supporting real-time user interactions.
-    </p>
-    <ul>
-      <li>Designed and implemented 20+ scalable <strong>REST APIs</strong> using <strong>Node.js</strong> and <strong>MongoDB</strong>, supporting core platform functionality including user management, rewards processing, and transaction workflows.</li>    
-      <li>Built backend services using <strong>Flask</strong> and <strong>MySQL</strong>, enabling efficient data storage, retrieval, and processing for production application workloads.</li>    
-      <li>Contributed to backend <strong>system architecture and service design</strong>, improving scalability, modularity, and reliability of distributed backend components.</li>
-      <li>Developed <strong>data preprocessing and backend processing pipelines</strong> using <strong>Python</strong>, supporting ML-driven application features and backend data workflows.</li>
-    </ul>
-  </div>
+<hr class="divider">
+<div class="section">
+<div class="section-label">Beyond the code</div>
+<div class="section-title">Leadership & Awards</div>
+<div class="leadership-grid">
+<div class="leadership-card">
+<div class="leadership-icon">🏆</div>
+<div>
+<h3>President — KCL AI Society</h3>
+<p>Led 15+ technical workshops for 200+ attendees. Earned the KCLSU Silver Crown Award for outstanding leadership.</p>
+</div>
+</div>
+<div class="leadership-card">
+<div class="leadership-icon">🤖</div>
+<div>
+<h3>Head of AI Specialism — KCL Tech</h3>
+<p>Organised applied AI workshops and industry speaker sessions for the KCL tech community.</p>
+</div>
+</div>
+<div class="leadership-card">
+<div class="leadership-icon">🤝</div>
+<div>
+<h3>Mentor — NYU WoMentorship</h3>
+<p>Mentoring students in technical skill-building, career planning, and academic transition at NYU Tandon.</p>
+</div>
+</div>
+</div>
+</div>
 
-  <div class="experience-item">
-    <div class="experience-header">
-      <h3>Skolar Edu Tech — AI Intern</h3>
-      <span class="experience-meta">Remote · Jul 2023 – Sep 2023</span>
-    </div>
-    <p>
-      AI internship focused on applied machine learning and data preprocessing.
-    </p>
-    <ul>
-      <li>Developed ML preprocessing pipelines using <strong>Python</strong> and <strong>TensorFlow</strong> to process and prepare <strong>5K+ structured education records</strong>.</li>
-      <li>Implemented backend <strong>data transformation pipelines</strong> to improve feature extraction and model training efficiency.</li>
-      <li>Worked with structured datasets and backend <strong>processing workflows</strong> supporting ML model training and evaluation.</li>
-    </ul>
-  </div>
-
-  <div class="experience-item">
-    <div class="experience-header">
-      <h3>Headstart Global — Team Lead (Micro-Internship)</h3>
-      <span class="experience-meta">May 2025 – Jul 2025</span>
-    </div>
-    <p>
-      Led a team on a product research and feature design initiative in the early-career recruitment space.
-    </p>
-    <ul>
-      <li>Analyzed 10+ competing platforms to evaluate <strong>system architecture</strong>, scalability considerations, and user workflows.</li>
-      <li>Designed 12 product features and <strong>system workflows</strong> adopted in early-stage product development.</li>
-    </ul>
-  </div>
-
-</section>
-
-<section>
-  <h2>PROJECTS</h2>
-
-  <!-- 1️⃣ Chess Pipeline -->
-  <div class="project">
-    <div class="project-header">
-      <h3>♟️ Chess Opening–to–Endgame Analytics Pipeline</h3>
-      <a href="https://github.com/Sanshiv123/chess-opening-endgame-pipeline"
-        target="_blank"
-        class="project-link">🐙 GitHub</a>
-    </div>
-
-    <div class="project-meta">
-      <span>Distributed Big Data System</span>
-    </div>
-
-    <p>
-      A distributed batch–streaming analytics pipeline that studies how chess
-      openings statistically transition into endgame structures at scale.
-    </p>
-    <ul>
-      <li>Processed 500K+ PGN games using Hadoop MapReduce and Apache Spark.</li>
-      <li>Designed a Lambda architecture combining batch analytics with real-time inference.</li>
-      <li>Trained a CNN on FEN-encoded board states for endgame prediction.</li>
-      <li>Integrated Kafka + Spark Structured Streaming with sub–2s latency.</li>
-    </ul>
-    <div class="tags">
-      <span class="tag">Hadoop</span>
-      <span class="tag">Spark</span>
-      <span class="tag">Kafka</span>
-      <span class="tag">MongoDB</span>
-      <span class="tag">TensorFlow</span>
-      <span class="tag">Distributed Systems</span>
-    </div>
-  </div>
-
-  <!-- 2️⃣ MindSafe -->
-  <div class="project">
-    <div class="project-header">
-      <h3>🧠 MindSafe — AI Media Safety Platform</h3>
-      <a href="https://github.com/TylersHub/MindSafe"
-        target="_blank"
-        class="project-link">🐙 GitHub</a>
-    </div>
-
-    <div class="project-meta">
-      <span>HackNYU · Social Impact</span>
-    </div>
-
-    <p>
-      AI-powered app and Chrome extension that evaluates online videos for
-      children’s mental-health safety using age-specific scoring.
-    </p>
-    <ul>
-      <li>Designed a multi-metric algorithm analyzing pacing, language, narrative, and SEL signals.</li>
-      <li>Built an AI-driven content analysis pipeline using LLMs for transcription and semantic analysis.</li>
-      <li>Generated age-specific Development Scores and Brainrot Indexes.</li>
-    </ul>
-    <div class="tags">
-      <span class="tag">Algorithm Design</span>
-      <span class="tag">AI Systems</span>
-      <span class="tag">LLMs</span>
-      <span class="tag">Chrome Extension</span>
-    </div>
-  </div>
-
-  <!-- 3️⃣ Avalanche -->
-  <div class="project">
-    <div class="project-header">
-      <h3>🚀 Avalanche — AI Crypto Trading Assistant</h3>
-      <a href="https://github.com/savs02/avalanche"
-        target="_blank"
-        class="project-link">🐙 GitHub</a>
-    </div>
-
-    <div class="project-meta">
-      <span>Hackathon Project · Runner-Up (QRT Challenge)</span>
-    </div>
-
-    <p>
-      AI-powered crypto trading assistant built during a 24-hour hackathon.
-    </p>
-    <ul>
-      <li>Built backend services using Python, FastAPI, and Flask.</li>
-      <li>Integrated OpenAI, CoinGecko, and Crypto News APIs.</li>
-      <li>Added Twilio voice alerts and real-time dashboards.</li>
-    </ul>
-    <div class="tags">
-      <span class="tag">Python</span>
-      <span class="tag">FastAPI</span>
-      <span class="tag">Flask</span>
-      <span class="tag">OpenAI API</span>
-      <span class="tag">Twilio</span>
-    </div>
-  </div>
-
-  <!-- 4️⃣ Strype -->
-  <div class="project">
-    <div class="project-header">
-      <h3>🎓 Strype — Gamification Feature Extension</h3>
-      <a href="https://github.com/Sanshiv123/Strype"
-        target="_blank"
-        class="project-link">🐙 GitHub</a>
-    </div>
-
-    <div class="project-meta">
-      <span>EdTech Platform Extension</span>
-    </div>
-
-    <p>
-      Extension of <strong>strype.org</strong>, a Python learning platform,
-      focused on improving learner engagement through gamification.
-    </p>
-    <ul>
-      <li>Designed badge and points progression logic based on code metrics and milestones.</li>
-      <li>Built a progress-tracking dashboard for 100+ learners using Vue.js and TypeScript.</li>
-      <li>Conducted usability testing and authored a 25,000-word dissertation.</li>
-    </ul>
-    <div class="tags">
-      <span class="tag">Vue.js</span>
-      <span class="tag">TypeScript</span>
-      <span class="tag">Product Design</span>
-      <span class="tag">User Research</span>
-    </div>
-  </div>
-
-  <!-- 5️⃣ Digital Journaling -->
-  <div class="project">
-    <div class="project-header">
-      <h3>📓 Infinite Loop Innovators — Digital Journaling Platform</h3>
-      <a href="https://github.com/k22049904/Infinite-Loop-Innovators"
-        target="_blank"
-        class="project-link">🐙 GitHub</a>
-    </div>
-
-    <div class="project-meta">
-      <span>Full-Stack Web Application</span>
-    </div>
-
-    <p>
-      Secure, responsive journaling platform built by a 5-member Agile team.
-    </p>
-    <ul>
-      <li>Implemented authentication and data persistence using Django and React.</li>
-      <li>Designed workflows for note creation, categorization, and retrieval.</li>
-      <li>Led feature coordination, code reviews, and testing.</li>
-    </ul>
-    <div class="tags">
-      <span class="tag">Django</span>
-      <span class="tag">React</span>
-      <span class="tag">REST APIs</span>
-      <span class="tag">SDLC</span>
-    </div>
-  </div>
-
-</section>
-
-
-<section>
-  <h2>HACKATHONS & COMPETITIONS</h2>
-
-  <div class="hackathon-item">
-    <div class="hackathon-header">
-      <h3>🏆 Hack the Burgh 2025 — Runner Up (QRT Challenge)</h3>
-      <span class="hackathon-meta">University of Edinburgh</span>
-    </div>
-    <ul>
-      <li>Placed Runner-Up in Qube Research & Technology’s challenge.</li>
-      <li>Built <strong>Avalanche</strong>, an AI-powered crypto trading assistant.</li>
-    </ul>
-  </div>
-
-  <div class="hackathon-item">
-    <div class="hackathon-header">
-      <h3>🧠 HackNYU — MindSafe</h3>
-      <span class="hackathon-meta">New York University</span>
-    </div>
-    <ul>
-      <li>
-        Developed <strong>MindSafe</strong>, an app and Chrome extension ranking videos
-        by children’s mental-health safety.
-      </li>
-    </ul>
-  </div>
-
-  <div class="hackathon-item">
-    <div class="hackathon-header">
-      <h3>🥇 Microsoft Global Power Hackathon — Winner</h3>
-      <span class="hackathon-meta">Microsoft · EY · Pareto Economics</span>
-    </div>
-    <ul>
-      <li>Won 1st place for solution impact and delivery.</li>
-      <li>Built a 5G-readiness index dashboard using economic and infrastructure data.</li>
-    </ul>
-  </div>
-</section>
-  
-
-<section>
-  <h2>LEADERSHIP & AWARDS</h2>
-
-  <div class="leadership-list">
-
-    <div class="leadership-item">
-      <div class="leadership-icon">🏆</div>
-      <div class="leadership-content">
-        <strong>President — KCL Artificial Intelligence Society</strong>
-        <span>
-          Led 15+ workshops and talks for 200+ students; awarded the
-          <strong>KCLSU Silver Crown</strong> for outstanding leadership.
-        </span>
-      </div>
-    </div>
-
-    <div class="leadership-item">
-      <div class="leadership-icon">🤖</div>
-      <div class="leadership-content">
-        <strong>Head of AI Specialism — KCL Tech</strong>
-        <span>
-          Organized technical workshops and speaker sessions focused on applied AI
-          and industry use cases.
-        </span>
-      </div>
-    </div>
-
-    <div class="leadership-item">
-      <div class="leadership-icon">🤝</div>
-      <div class="leadership-content">
-        <strong>Mentor — NYU WoMentorship</strong>
-        <span>
-          Mentoring students in technical skill-building, career planning,
-          and academic transition.
-        </span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
+<hr class="divider">
+<footer id="contact">
+<p>
+Brooklyn, NY &nbsp;·&nbsp;
+<a href="mailto:sanchu2804kb@gmail.com">sanchu2804kb@gmail.com</a> &nbsp;·&nbsp;
+<a href="https://github.com/Sanshiv123" target="_blank">GitHub</a> &nbsp;·&nbsp;
+<a href="https://www.linkedin.com/in/sanchusri-kavitha-babu-058231255/" target="_blank">LinkedIn</a>
+</p>
+<p style="margin-top: 10px; font-size: 0.78rem;">MS Computer Science · NYU Tandon · GPA 3.90 · First-Class Honours · King's College London</p>
+</footer>
 
 </body>
 </html>
