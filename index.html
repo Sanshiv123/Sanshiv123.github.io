@@ -211,8 +211,6 @@ margin-bottom: 4px;
 .section { max-width: 1100px; margin: 0 auto; padding: 80px 60px; }
 .section-label { font-size: 0.75rem; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; }
 .section-title { font-family: 'Syne', sans-serif; font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800; color: var(--white); letter-spacing: -0.02em; margin-bottom: 48px; line-height: 1.15; }
-
-/* SKILLS — boxes */
 .skills-grid {
 display: grid;
 grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -251,7 +249,6 @@ padding: 4px 10px;
 border-radius: 6px;
 font-weight: 400;
 }
-
 .exp-list { display: flex; flex-direction: column; gap: 0; }
 .exp-item { display: grid; grid-template-columns: 160px 1fr; gap: 32px; padding: 36px 0; border-bottom: 1px solid var(--border); }
 .exp-item:first-child { padding-top: 0; }
@@ -263,7 +260,6 @@ font-weight: 400;
 .exp-right ul li { font-size: 0.9rem; color: var(--muted); padding-left: 16px; position: relative; line-height: 1.6; }
 .exp-right ul li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-size: 0.75rem; top: 2px; }
 .exp-right ul li strong { color: var(--text); font-weight: 500; }
-
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
 .project-card {
 background: var(--surface);
@@ -310,7 +306,6 @@ width: fit-content;
 .project-tag { background: var(--surface2); color: var(--muted); font-size: 0.72rem; padding: 3px 8px; border-radius: 4px; }
 .project-link { color: var(--accent); font-size: 0.8rem; text-decoration: none; font-weight: 500; white-space: nowrap; margin-left: 12px; }
 .project-link:hover { text-decoration: underline; }
-
 .hackathon-list { display: flex; flex-direction: column; gap: 16px; }
 .hackathon-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px 28px; display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; transition: border-color 0.2s; }
 .hackathon-card:hover { border-color: rgba(110,231,183,0.25); }
@@ -320,14 +315,12 @@ width: fit-content;
 .hackathon-card p { font-size: 0.875rem; color: var(--muted); line-height: 1.6; }
 .hack-right { text-align: right; white-space: nowrap; }
 .hack-org { font-size: 0.78rem; color: var(--muted); line-height: 1.8; }
-
 .leadership-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
 .leadership-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; display: flex; gap: 16px; transition: border-color 0.2s; }
 .leadership-card:hover { border-color: rgba(110,231,183,0.2); }
 .leadership-icon { font-size: 1.4rem; line-height: 1; flex-shrink: 0; }
 .leadership-card h3 { font-family: 'Syne', sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--white); margin-bottom: 6px; }
 .leadership-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
-
 footer { border-top: 1px solid var(--border); padding: 40px 60px; text-align: center; }
 footer p { font-size: 0.85rem; color: var(--muted); }
 footer a { color: var(--accent); text-decoration: none; }
@@ -337,7 +330,6 @@ footer a { color: var(--accent); text-decoration: none; }
 </style>
 </head>
 <body>
-
 <nav>
 <div class="nav-logo">SKB</div>
 <ul class="nav-links">
@@ -352,12 +344,11 @@ footer a { color: var(--accent); text-decoration: none; }
 <section class="hero">
 <div class="hero-inner">
 <div>
-<div class="hero-tag">Open to Summer 2026 Internships</div>
+<div class="hero-tag">Open to New Grad 2027 Roles</div>
 <h1>Sanchusri<br><span class="highlight">Kavitha Babu</span></h1>
 <p class="hero-sub">MS CS at NYU Tandon · Backend &amp; Distributed Systems Engineer · Building AI pipelines, scalable APIs, and data infrastructure that ships to production.</p>
 <div class="hero-links">
 <a href="mailto:sanchu2804kb@gmail.com" class="btn-primary">Get in Touch</a>
-<a href="resources/Sanchusri_Kavitha_babu_resume.pdf" download class="btn-ghost">Download Resume ↓</a>
 <a href="https://github.com/Sanshiv123" target="_blank" class="btn-ghost">GitHub</a>
 <a href="https://www.linkedin.com/in/sanchusri-kavitha-babu-058231255/" target="_blank" class="btn-ghost">LinkedIn</a>
 </div>
@@ -373,10 +364,11 @@ footer a { color: var(--accent); text-decoration: none; }
 <div class="stat"><span class="stat-num">3</span><span class="stat-label">Hackathon Wins</span></div>
 <div class="stat"><span class="stat-num">500K+</span><span class="stat-label">Records Processed</span></div>
 <div class="stat"><span class="stat-num">20+</span><span class="stat-label">Production APIs</span></div>
-<div class="stat"><span class="stat-num">2</span><span class="stat-label">Production Roles</span></div>
+<div class="stat"><span class="stat-num">3</span><span class="stat-label">Engineering Roles</span></div>
 </div>
 
 <hr class="divider">
+
 <div class="section" id="skills">
 <div class="section-label">What I work with</div>
 <div class="section-title">Technical Skills</div>
@@ -384,242 +376,276 @@ footer a { color: var(--accent); text-decoration: none; }
 <div class="skill-card">
 <div class="skill-card-title">Languages</div>
 <div class="skill-tags">
-<span class="skill-tag">Python</span><span class="skill-tag">Java</span><span class="skill-tag">C++</span><span class="skill-tag">TypeScript</span><span class="skill-tag">JavaScript</span><span class="skill-tag">SQL</span><span class="skill-tag">Scala</span>
+<span class="skill-tag">Python</span><span class="skill-tag">Java</span><span class="skill-tag">C++</span><span class="skill-tag">TypeScript</span><span class="skill-tag">JavaScript</span><span class="skill-tag">SQL</span>
 </div>
 </div>
 <div class="skill-card">
 <div class="skill-card-title">Backend & APIs</div>
 <div class="skill-tags">
-<span class="skill-tag">Node.js</span><span class="skill-tag">Flask</span><span class="skill-tag">Django</span><span class="skill-tag">FastAPI</span><span class="skill-tag">Express.js</span><span class="skill-tag">REST APIs</span><span class="skill-tag">Microservices</span><span class="skill-tag">Postman</span>
+<span class="skill-tag">Node.js</span><span class="skill-tag">Flask</span><span class="skill-tag">FastAPI</span><span class="skill-tag">Express.js</span><span class="skill-tag">REST APIs</span><span class="skill-tag">WebSockets</span><span class="skill-tag">Microservices</span>
 </div>
 </div>
 <div class="skill-card">
 <div class="skill-card-title">Distributed Systems</div>
 <div class="skill-tags">
-<span class="skill-tag">Apache Kafka</span><span class="skill-tag">Apache Spark</span><span class="skill-tag">Hadoop</span><span class="skill-tag">PySpark</span><span class="skill-tag">ETL Pipelines</span><span class="skill-tag">Lambda Architecture</span><span class="skill-tag">Streaming</span>
+<span class="skill-tag">Apache Kafka</span><span class="skill-tag">Apache Spark</span><span class="skill-tag">Hadoop</span><span class="skill-tag">PySpark</span><span class="skill-tag">Lambda Architecture</span><span class="skill-tag">Streaming</span>
 </div>
 </div>
 <div class="skill-card">
 <div class="skill-card-title">Databases</div>
 <div class="skill-tags">
-<span class="skill-tag">PostgreSQL</span><span class="skill-tag">MongoDB</span><span class="skill-tag">MySQL</span><span class="skill-tag">Cosmos DB</span><span class="skill-tag">VectorAI DB</span><span class="skill-tag">DynamoDB</span><span class="skill-tag">Redis</span>
+<span class="skill-tag">PostgreSQL</span><span class="skill-tag">MongoDB</span><span class="skill-tag">MySQL</span><span class="skill-tag">Cosmos DB</span><span class="skill-tag">Neo4j</span>
 </div>
 </div>
 <div class="skill-card">
 <div class="skill-card-title">Frontend</div>
 <div class="skill-tags">
-<span class="skill-tag">React</span><span class="skill-tag">Vue.js</span><span class="skill-tag">D3.js</span><span class="skill-tag">HTML / CSS</span><span class="skill-tag">Chrome Extensions</span>
+<span class="skill-tag">React</span><span class="skill-tag">Vue.js</span><span class="skill-tag">HTML / CSS</span><span class="skill-tag">Chrome Extensions</span>
 </div>
 </div>
 <div class="skill-card">
 <div class="skill-card-title">Cloud & DevOps</div>
 <div class="skill-tags">
-<span class="skill-tag">Azure</span><span class="skill-tag">AWS</span><span class="skill-tag">Databricks</span><span class="skill-tag">Docker</span><span class="skill-tag">CI/CD</span><span class="skill-tag">Git</span><span class="skill-tag">JWT / RBAC</span>
+<span class="skill-tag">GCP</span><span class="skill-tag">Azure</span><span class="skill-tag">Databricks</span><span class="skill-tag">Docker</span><span class="skill-tag">CI/CD</span><span class="skill-tag">Git</span><span class="skill-tag">JWT / RBAC</span>
 </div>
 </div>
 <div class="skill-card">
 <div class="skill-card-title">AI & ML</div>
 <div class="skill-tags">
-<span class="skill-tag">RAG Pipelines</span><span class="skill-tag">XGBoost</span><span class="skill-tag">Scikit-learn</span><span class="skill-tag">LLM Integration</span><span class="skill-tag">TensorFlow</span><span class="skill-tag">Pandas</span><span class="skill-tag">NumPy</span><span class="skill-tag">SciPy</span><span class="skill-tag">Gemini API</span>
+<span class="skill-tag">RAG Pipelines</span><span class="skill-tag">Agentic AI</span><span class="skill-tag">LLM Integration</span><span class="skill-tag">PyTorch</span><span class="skill-tag">XGBoost</span><span class="skill-tag">Scikit-learn</span><span class="skill-tag">TensorFlow</span><span class="skill-tag">NumPy</span>
 </div>
 </div>
 <div class="skill-card">
-<div class="skill-card-title">Quant Methods</div>
+<div class="skill-card-title">Core CS</div>
 <div class="skill-tags">
-<span class="skill-tag">Time Series</span><span class="skill-tag">Regression Modelling</span><span class="skill-tag">Causal Inference</span><span class="skill-tag">Prediction Market</span><span class="skill-tag">Financial Modelling</span>
+<span class="skill-tag">Distributed Systems</span><span class="skill-tag">System Design</span><span class="skill-tag">Concurrency</span><span class="skill-tag">Security</span><span class="skill-tag">Graph RAG</span>
 </div>
 </div>
 </div>
 </div>
 
 <hr class="divider">
+
 <div class="section" id="experience">
 <div class="section-label">Where I've worked</div>
 <div class="section-title">Experience</div>
 <div class="exp-list">
-<div class="exp-item">
-<div class="exp-date">Nov 2024 – May 2025<br>London, UK</div>
-<div class="exp-right">
-<h3>Software Engineer</h3>
-<div class="exp-company">King's Labs · Healthcare SaaS</div>
-<ul>
-<li>Built distributed <strong>REST APIs</strong> (Node/Express.js) for Smile-Shot, a dental imaging SaaS — reducing upload latency by <strong>30%</strong>.</li>
-<li>Implemented <strong>JWT + RBAC</strong> access control across 15+ endpoints with zero-downtime deployments.</li>
-<li>Automated <strong>CI/CD pipelines</strong> on Azure DevOps, cutting deployment time by <strong>30 minutes per release</strong>.</li>
-<li>Migrated <strong>PostgreSQL → Azure Cosmos DB</strong>, improving query performance by <strong>28%</strong> in production.</li>
-</ul>
-</div>
-</div>
-<div class="exp-item">
-<div class="exp-date">Jun – Aug 2024<br>London, UK</div>
-<div class="exp-right">
-<h3>Software Engineering Intern</h3>
-<div class="exp-company">SmallCap.AI · Fintech</div>
-<ul>
-<li>Built <strong>20+ scalable REST APIs</strong> (Node.js + MongoDB) for Play2Earn.ai — 100+ live users, improving throughput by <strong>35%</strong>.</li>
-<li>Designed <strong>Flask microservices</strong> and MySQL schemas cutting query latency by <strong>25ms</strong>.</li>
-<li>Built <strong>ML preprocessing pipeline</strong> (Pandas, NumPy, Scikit-learn) — <strong>15% accuracy improvement</strong> in CV classification.</li>
-<li>Deployed <strong>Postman validation suites</strong> + regression testing ensuring <strong>99% uptime</strong>.</li>
-</ul>
-</div>
-</div>
-<div class="exp-item">
-<div class="exp-date">Jul – Sep 2023<br>Remote</div>
-<div class="exp-right">
-<h3>AI Intern</h3>
-<div class="exp-company">Skolar Edu Tech · EdTech</div>
-<ul>
-<li>Developed ML preprocessing pipelines using <strong>Python + TensorFlow</strong> processing 5K+ education records.</li>
-<li>Built backend data transformation workflows improving feature extraction and model training efficiency.</li>
-</ul>
-</div>
-</div>
+
+  <div class="exp-item">
+    <div class="exp-date">Jun – Aug 2026<br>New York, NY</div>
+    <div class="exp-right">
+      <h3>Software Engineering Intern</h3>
+      <div class="exp-company">CEARTscore · Clean Energy AI</div>
+      <ul>
+        <li>Built a multi-source benchmark data pipeline across <strong>2 YAML config layers</strong> with an <strong>8-point data quality rubric</strong>; automated ingestion of <strong>7+ regulatory/tariff sources</strong> across <strong>3 ISOs</strong>.</li>
+        <li>Engineered statistical aggregation pipelines parsing <strong>35-zone MISO</strong> and <strong>19-zone PJM</strong> rate datasets — outlier-exclusion logic and unit conversions producing normalized benchmark bands across <strong>12 cost datapoints</strong>.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-date">May 2026 – Present<br>New York, NY</div>
+    <div class="exp-right">
+      <h3>Teaching Assistant — Big Data</h3>
+      <div class="exp-company">NYU Tandon · CS-GY 6513</div>
+      <ul>
+        <li>Lead course operations for <strong>32+ graduate students</strong>; sole grader for all assignments; designing assessment questions on fault-tolerant distributed pipeline architecture.</li>
+        <li>Running <strong>2 weekly office hours</strong> on Apache Spark, Kafka, Hadoop, and GCP Dataproc.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-date">May 2025 – Present<br>New York, NY</div>
+    <div class="exp-right">
+      <h3>Graduate Research Assistant</h3>
+      <div class="exp-company">NYU Human Capital Analytics Lab</div>
+      <ul>
+        <li>Built a unified <strong>Neo4j</strong> knowledge graph normalising <strong>900+ occupations, 18K+ tasks, 8,700+ skills</strong> across 3 ontologies (O*NET, ESCO, SkillsFuture).</li>
+        <li>Evaluated Graph RAG pipelines on <strong>NYU Greene HPC</strong> via SLURM array jobs across <strong>5 RAGAs quality metrics</strong>; targeting peer-reviewed publication.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-date">Nov 2024 – May 2025<br>London, UK</div>
+    <div class="exp-right">
+      <h3>Software Engineer</h3>
+      <div class="exp-company">King's Labs, KCL · Healthcare SaaS</div>
+      <ul>
+        <li>Built distributed REST APIs (Node.js/Express) for <strong>Smile-Shot</strong>, a dental imaging SaaS — <strong>reducing P99 latency by 30%</strong> across 15+ endpoints.</li>
+        <li>Architected <strong>PostgreSQL → Azure Cosmos DB</strong> migration with zero-downtime cutover, <strong>improving query throughput by 28%</strong>.</li>
+        <li>Implemented <strong>JWT + RBAC</strong> and GDPR-aligned DICOM contracts across 15+ microservices; automated CI/CD (Azure DevOps), <strong>cutting deploy time by 30 minutes per release</strong>.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-date">Jun – Aug 2024<br>London, UK</div>
+    <div class="exp-right">
+      <h3>Software Engineering Intern</h3>
+      <div class="exp-company">SmallCap.AI · Fintech</div>
+      <ul>
+        <li>Engineered <strong>20+ production REST APIs</strong> (Node.js, MongoDB) for Play2Earn.ai serving <strong>100+ concurrent users</strong>, <strong>improving throughput by 35%</strong> via connection pooling.</li>
+        <li>Built Flask microservices and MySQL schemas <strong>reducing query latency by 25ms</strong>; developed ML preprocessing pipeline improving <strong>model accuracy by 15%</strong>.</li>
+      </ul>
+    </div>
+  </div>
+
 </div>
 </div>
 
 <hr class="divider">
+
 <div class="section" id="projects">
 <div class="section-label">What I've built</div>
 <div class="section-title">Projects</div>
 <div class="projects-grid">
 
-<div class="project-card">
-<div class="project-badge badge-hack">HackPrinceton 2026</div>
-<h3>MedEcho — AI Medical Image Triage Platform</h3>
-<p>End-to-end medical triage system built in 36 hours. DenseNet CNN classifies chest X-rays with GradCAM explainability heatmaps. Gemini 2.5 Flash dual-output pipeline generates clinical reports and patient scripts converted to multilingual audio via ElevenLabs. Three-portal React system with live ClinicalTrials.gov trial matching.</p>
-<div class="project-footer">
-<div class="project-tags">
-<span class="project-tag">PyTorch</span><span class="project-tag">Flask</span><span class="project-tag">React</span><span class="project-tag">Gemini 2.5</span><span class="project-tag">ElevenLabs</span>
-</div>
-<a href="https://github.com/Sanshiv123/MedEcho" target="_blank" class="project-link">GitHub →</a>
-</div>
-</div>
+  <div class="project-card">
+    <div class="project-badge badge-project">Big Data · NYU</div>
+    <h3>Chess Analytics Pipeline</h3>
+    <p>Distributed batch-streaming pipeline processing <strong>500K+ chess games (~80M moves)</strong> on Google Cloud Dataproc. Lambda architecture with Spark Structured Streaming achieving <strong>&lt;2s micro-batch latency</strong>. Fault-tolerant ingestion with CNN trained on FEN-encoded board states predicting 11 endgame classes.</p>
+    <div class="project-footer">
+      <div class="project-tags">
+        <span class="project-tag">Hadoop</span><span class="project-tag">Spark</span><span class="project-tag">Kafka</span><span class="project-tag">GCP</span><span class="project-tag">TensorFlow</span>
+      </div>
+      <a href="https://github.com/Sanshiv123/chess-opening-endgame-pipeline" target="_blank" class="project-link">GitHub →</a>
+    </div>
+  </div>
 
-<div class="project-card">
-<div class="project-badge badge-win">🏆 2nd Place · Hacklytics 2026</div>
-<h3>BLINDSPOT — AI Capital Allocation Engine</h3>
-<p>Production-grade RAG pipeline indexing 2,388 UN documents using Actian VectorAI DB. XGBoost severity scoring across 5 datasets. SciPy optimizer. Gemini 2.5 Flash LLM embedded in the platform. Built and trained on Databricks in 36 hours.</p>
-<div class="project-footer">
-<div class="project-tags">
-<span class="project-tag">RAG</span><span class="project-tag">XGBoost</span><span class="project-tag">Databricks</span><span class="project-tag">VectorAI DB</span>
-</div>
-<a href="https://github.com/Hidhayath-Nisha/blindspotv" target="_blank" class="project-link">GitHub →</a>
-</div>
-</div>
+  <div class="project-card">
+    <div class="project-badge badge-win">🏆 2nd Place · Hacklytics 2026</div>
+    <h3>BLINDSPOT — RAG + ML Capital Allocation</h3>
+    <p>Production-grade RAG pipeline indexing <strong>2,388 UN documents</strong> with vector embeddings and semantic retrieval. XGBoost severity scoring across <strong>5 datasets (+15% accuracy)</strong>. Deployed end-to-end on <strong>Databricks</strong> in 36 hours with Gemini 2.5 Flash agentic reasoning layer.</p>
+    <div class="project-footer">
+      <div class="project-tags">
+        <span class="project-tag">RAG</span><span class="project-tag">XGBoost</span><span class="project-tag">Databricks</span><span class="project-tag">Gemini 2.5</span>
+      </div>
+      <a href="https://github.com/Hidhayath-Nisha/blindspotv" target="_blank" class="project-link">GitHub →</a>
+    </div>
+  </div>
 
-<div class="project-card">
-<div class="project-badge badge-win">YHacks 2026</div>
-<h3>PolyHedge — Prediction Market Hedging Platform</h3>
-<p>Full-stack platform connecting leveraged crypto positions to live Polymarket contracts. Proprietary Alpha Score (0–100) across 4 weighted dimensions detecting mispricing. K2 Think V2 AI for hedge ratio optimization.</p>
-<div class="project-footer">
-<div class="project-tags">
-<span class="project-tag">Python</span><span class="project-tag">Polymarket API</span><span class="project-tag">K2 AI</span><span class="project-tag">Auth0</span>
-</div>
-<a href="https://github.com/janesanjana4/PolyHedge" target="_blank" class="project-link">GitHub →</a>
-</div>
-</div>
+  <div class="project-card">
+    <div class="project-badge badge-hack">HackPrinceton 2026</div>
+    <h3>MedEcho — AI Medical Image Triage</h3>
+    <p>DenseNet CNN classifying chest X-rays with <strong>GradCAM explainability heatmaps at 56% accuracy</strong>. Gemini 2.5 Flash dual-output pipeline generates clinical reports and patient scripts. Three-portal React system with live <strong>ClinicalTrials.gov v2 API</strong> trial matching across 6 diagnostic factors.</p>
+    <div class="project-footer">
+      <div class="project-tags">
+        <span class="project-tag">PyTorch</span><span class="project-tag">Flask</span><span class="project-tag">React</span><span class="project-tag">Gemini 2.5</span>
+      </div>
+      <a href="https://github.com/Sanshiv123/MedEcho" target="_blank" class="project-link">GitHub →</a>
+    </div>
+  </div>
 
-<div class="project-card">
-<div class="project-badge badge-project">Big Data · NYU</div>
-<h3>Chess Opening-to-Endgame Analytics Pipeline</h3>
-<p>Distributed batch-streaming pipeline processing 500K+ chess games (~80M moves). Lambda architecture with Spark Structured Streaming achieving sub-2s micro-batch latency. CNN trained on FEN-encoded board states.</p>
-<div class="project-footer">
-<div class="project-tags">
-<span class="project-tag">Hadoop</span><span class="project-tag">Spark</span><span class="project-tag">Kafka</span><span class="project-tag">MongoDB</span>
-</div>
-<a href="https://github.com/Sanshiv123/chess-opening-endgame-pipeline" target="_blank" class="project-link">GitHub →</a>
-</div>
-</div>
+  <div class="project-card">
+    <div class="project-badge badge-win">YHacks 2026</div>
+    <h3>PolyHedge — Prediction Market Risk Intelligence</h3>
+    <p>Real-time risk engine on live Polymarket data. Proprietary <strong>Alpha Score (0–100)</strong> across 4 signal dimensions detecting market mispricing. K2 Think V2 AI for hedge ratio optimisation across bull/base/bear scenarios.</p>
+    <div class="project-footer">
+      <div class="project-tags">
+        <span class="project-tag">Python</span><span class="project-tag">Polymarket API</span><span class="project-tag">K2 AI</span><span class="project-tag">Auth0</span>
+      </div>
+      <a href="https://github.com/janesanjana4/PolyHedge" target="_blank" class="project-link">GitHub →</a>
+    </div>
+  </div>
 
-<div class="project-card">
-<div class="project-badge badge-hack">HackNYU 2025</div>
-<h3>MindSafe — AI Media Safety Platform</h3>
-<p>LLM-powered media analysis platform built in 24 hours. Multi-metric scoring algorithm using LLM transcription and semantic analysis across 8 developmental metrics. Shipped as web app and Chrome extension.</p>
-<div class="project-footer">
-<div class="project-tags">
-<span class="project-tag">LLMs</span><span class="project-tag">Semantic Analysis</span><span class="project-tag">React</span>
-</div>
-<a href="https://github.com/TylersHub/MindSafe" target="_blank" class="project-link">GitHub →</a>
-</div>
-</div>
+  <div class="project-card">
+    <div class="project-badge badge-hack">HackNYU 2026</div>
+    <h3>MindSafe — AI Media Safety Platform</h3>
+    <p>LLM-powered media analysis platform built in 24 hours. Evaluates children's content across <strong>8 developmental metrics</strong> generating age-specific Development Scores. Shipped as web app and Chrome extension with automated video safety classification.</p>
+    <div class="project-footer">
+      <div class="project-tags">
+        <span class="project-tag">LLMs</span><span class="project-tag">FastAPI</span><span class="project-tag">React</span><span class="project-tag">Chrome Extension</span>
+      </div>
+      <a href="https://github.com/TylersHub/MindSafe" target="_blank" class="project-link">GitHub →</a>
+    </div>
+  </div>
 
-<div class="project-card">
-<div class="project-badge badge-project">Dissertation · KCL</div>
-<h3>Strype — Gamification Feature Extension</h3>
-<p>End-to-end gamification for strype.org, a live coding education platform. 20+ badges, rule-based point progression, real-time progress dashboard for 250+ users. 25,000-word empirical research dissertation.</p>
-<div class="project-footer">
-<div class="project-tags">
-<span class="project-tag">Vue.js</span><span class="project-tag">TypeScript</span><span class="project-tag">User Research</span>
-</div>
-<a href="https://github.com/Sanshiv123/Strype" target="_blank" class="project-link">GitHub →</a>
-</div>
-</div>
+  <div class="project-card">
+    <div class="project-badge badge-project">Dissertation · KCL</div>
+    <h3>Strype — Gamification Platform</h3>
+    <p>End-to-end gamification for strype.org, a live Python education platform. 20+ badges, rule-based point progression, real-time dashboard serving <strong>250+ active users</strong> in production. Backed by 20+ user studies and a 25,000-word research dissertation.</p>
+    <div class="project-footer">
+      <div class="project-tags">
+        <span class="project-tag">Vue.js</span><span class="project-tag">TypeScript</span><span class="project-tag">Node.js</span>
+      </div>
+      <a href="https://github.com/Sanshiv123/Strype" target="_blank" class="project-link">GitHub →</a>
+    </div>
+  </div>
 
 </div>
 </div>
 
 <hr class="divider">
+
 <div class="section" id="hackathons">
 <div class="section-label">Competed & placed</div>
 <div class="section-title">Hackathons & Achievements</div>
 <div class="hackathon-list">
-<div class="hackathon-card">
-<div class="hack-left">
-<div class="hack-award">🏆 2nd Place — Fintech Track</div>
-<h3>Hacklytics 2026 — BLINDSPOT</h3>
-<p>AI capital allocation engine for humanitarian crises. RAG over 2,388 UN documents, XGBoost scoring, SciPy optimizer, Gemini 2.5 Flash. Built on Databricks in 36 hours.</p>
-</div>
-<div class="hack-right"><div class="hack-org">Databricks<br>UN · Actian<br>Feb 2026</div></div>
-</div>
-<div class="hackathon-card">
-<div class="hack-left">
-<div class="hack-award">🥈 Runner-Up — QRT Challenge</div>
-<h3>Hack the Burgh 2025 — Avalanche</h3>
-<p>AI-powered crypto trading assistant with real-time dashboards, Twilio voice alerts, and live market data integration. Built in 24 hours.</p>
-</div>
-<div class="hack-right"><div class="hack-org">Optiver<br>QRT · G-Research<br>Mar 2025</div></div>
-</div>
-<div class="hackathon-card">
-<div class="hack-left">
-<div class="hack-award">🥇 1st Place — Winner</div>
-<h3>Global Power Hackathon 2022</h3>
-<p>5G-readiness index dashboard integrating economic metrics with interactive data visualization. Outperformed 6–7 competing teams.</p>
-</div>
-<div class="hack-right"><div class="hack-org">Microsoft<br>EY · Pareto Economics<br>Nov 2022</div></div>
-</div>
+
+  <div class="hackathon-card">
+    <div class="hack-left">
+      <div class="hack-award">🏆 2nd Place — Fintech Track</div>
+      <h3>Hacklytics 2026 — BLINDSPOT</h3>
+      <p>AI capital allocation engine for humanitarian crises. RAG over 2,388 UN documents, XGBoost scoring across 5 datasets (+15% accuracy). Deployed on Databricks in 36 hours.</p>
+    </div>
+    <div class="hack-right"><div class="hack-org">Databricks<br>UN · Actian<br>Feb 2026</div></div>
+  </div>
+
+  <div class="hackathon-card">
+    <div class="hack-left">
+      <div class="hack-award">🥈 Runner-Up — QRT Challenge</div>
+      <h3>Hack the Burgh 2025 — Avalanche</h3>
+      <p>Real-time crypto trading assistant with 6 custom OpenAI function calls, Twilio voice interface, and live CoinGecko market data via FastAPI WebSocket.</p>
+    </div>
+    <div class="hack-right"><div class="hack-org">Optiver<br>QRT · G-Research<br>Mar 2025</div></div>
+  </div>
+
+  <div class="hackathon-card">
+    <div class="hack-left">
+      <div class="hack-award">🥇 1st Place — Winner</div>
+      <h3>Global Power Hackathon 2022</h3>
+      <p>5G-readiness index dashboard integrating economic metrics with interactive data visualisation. Built in 24 hours.</p>
+    </div>
+    <div class="hack-right"><div class="hack-org">Microsoft<br>EY · Pareto Economics<br>Nov 2022</div></div>
+  </div>
+
 </div>
 </div>
 
 <hr class="divider">
+
 <div class="section">
 <div class="section-label">Beyond the code</div>
 <div class="section-title">Leadership & Awards</div>
 <div class="leadership-grid">
-<div class="leadership-card">
-<div class="leadership-icon">🏆</div>
-<div>
-<h3>President — KCL AI Society</h3>
-<p>Led 15+ technical workshops for 200+ attendees. Earned the KCLSU Silver Crown Award for outstanding leadership.</p>
-</div>
-</div>
-<div class="leadership-card">
-<div class="leadership-icon">🤖</div>
-<div>
-<h3>Head of AI Specialism — KCL Tech</h3>
-<p>Organised applied AI workshops and industry speaker sessions for the KCL tech community.</p>
-</div>
-</div>
-<div class="leadership-card">
-<div class="leadership-icon">🤝</div>
-<div>
-<h3>Mentor — NYU WoMentorship</h3>
-<p>Mentoring students in technical skill-building, career planning, and academic transition at NYU Tandon.</p>
-</div>
-</div>
+  <div class="leadership-card">
+    <div class="leadership-icon">🏆</div>
+    <div>
+      <h3>President — KCL AI Society</h3>
+      <p>Led 15+ technical workshops for 200+ attendees. Earned the KCLSU Silver Crown Award for outstanding leadership.</p>
+    </div>
+  </div>
+  <div class="leadership-card">
+    <div class="leadership-icon">🤖</div>
+    <div>
+      <h3>Head of AI Specialism — KCL Tech</h3>
+      <p>Organised applied AI workshops and industry speaker sessions for 100+ members of the KCL tech community.</p>
+    </div>
+  </div>
+  <div class="leadership-card">
+    <div class="leadership-icon">🤝</div>
+    <div>
+      <h3>Mentor — NYU WoMentorship</h3>
+      <p>Mentoring 2 students in technical skill-building, career planning, and academic transition at NYU Tandon.</p>
+    </div>
+  </div>
 </div>
 </div>
 
 <hr class="divider">
+
 <footer id="contact">
 <p>
 Brooklyn, NY &nbsp;·&nbsp;
@@ -629,6 +655,5 @@ Brooklyn, NY &nbsp;·&nbsp;
 </p>
 <p style="margin-top: 10px; font-size: 0.78rem;">MS Computer Science · NYU Tandon · GPA 3.90 · First-Class Honours · King's College London</p>
 </footer>
-
 </body>
 </html>
